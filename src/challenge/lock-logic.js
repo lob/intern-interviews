@@ -28,7 +28,6 @@ function changeDialValue (index, incrementBy) {
   lockState.wheels[index] = lockState.wheels[index] + incrementBy
   var boolVar = lockState.wheels.some((val, idx) =>  SECRET_COMBO[idx] !== val)
   if (!boolVar) {
-    console.log(boolVar)
     lockState.locked = false
     window.redirect('Gopal')
   }
