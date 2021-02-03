@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "standard": "^16.0.3"
-  }
+  },
+  "name": "intern-interviews",
+  "description": "- Please duplicate this respository as a private repo in your own GitHub account. - Write your profile page (see details under [Profile Page](#profile-page)) - Author your code (see details under [Code Challenge](#code-challenge)) - Submit a pull request to your repo's `main` branch with your changes. - On github, please add [Alex Strachan](https://github.com/metalsheep/), [Sasha Ashpis](https://github.com/sasha-ashpis), [Roman Kofman](https://github.com/rkofman-lob), and [Nina Hwang](https://github.com/nihwang) to have write permissions. - Tag [Alex Strachan](https://github.com/metalsheep/), [Sasha Ashpis](https://github.com/sasha-ashpis), [Roman Kofman](https://github.com/rkofman-lob), and [Nina Hwang](https://github.com/nihwang) as reviewers on your PR.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gopal2696/intern-interviews.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gopal2696/intern-interviews/issues"
+  },
+  "homepage": "https://github.com/Gopal2696/intern-interviews#readme"
 }
