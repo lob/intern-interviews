@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Kenny Song</title>
+</head>
+<body>
+  <div class="col col--left col--center">
+    <h1>Kenny Song</h1>
+  </div>
+  <div class="col col--right">
+    <div id="profileBorder">
+      <img src="profile.png" alt="Kenny Song" id="profilePic">
+      <span class='miniText'>Hover me!</span>
+    </div>
+    <div class="text">
+      <p> I have always had passion for problem solving and tackling challenges of the unknown. To name drop a few accomplishments: I ran a marathon with no training, I started my own restaurant at the age of 23 (also with no management/ cooking experience), and created a full stack application in 3 months. I naturally had a predisposition for wanting to solve interesting problems, so I pursued a biomedical engineering degree in college. However, I did not find much passion for this particular subject. Post graduation, I bounced to different industries, working as a marketing consultant, a restaurant owner, and eventually an analyst for Apple. Once I was able to get an insider scoop into the tech scene, my <span class='bold'>React</span>ion was completely <span class='bold'>Hook</span>ed. Seeing an abstraction of seemingly random sequences of characters come to life as a product that people used completely mesmerized me and made me want to take the leap forward.</p>
+      <p> As a software intern, I want to continue solving unique problems and chasing that thrill of being able to get something to finally work exactly the way it’s supposed to. As much as I learn throughout the internship experience, I want to give back in terms of production, work, creativity, mentorship, or any form of tangible value. I truly feel like I have found my true passion and I want to be able to share all of that with the fellow interns and all of Lob.</p>
+    </div>
+  </div>
+</body>
+<script>
+  const randomColor = () => {
+    return Math.floor(Math.random() * 256);
+  };
+
+  setInterval(() => {
+    const profileBorder = document.getElementById("profileBorder");
+    profilePic.style.border = `10px dashed rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+  }, 300);
+</script>
+</html>
