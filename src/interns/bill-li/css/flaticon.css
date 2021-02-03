@@ -1,0 +1,65 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 11/12/2017 08:10
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../icon-fonts/Flaticon.eot");
+  src: url("../icon-fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../icon-fonts/Flaticon.woff") format("woff"),
+       url(".../icon-fonts/Flaticon.ttf") format("truetype"),
+       url("../icon-fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../icon-fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-style: normal;
+}
+
+.flaticon-001-yoga:before { content: "\f100"; }
+.flaticon-002-writing:before { content: "\f101"; }
+.flaticon-003-weightlifting:before { content: "\f102"; }
+.flaticon-004-cinema:before { content: "\f103"; }
+.flaticon-005-game-console:before { content: "\f104"; }
+.flaticon-006-swimming:before { content: "\f105"; }
+.flaticon-007-sports:before { content: "\f106"; }
+.flaticon-008-karaoke:before { content: "\f107"; }
+.flaticon-009-sewing-2:before { content: "\f108"; }
+.flaticon-010-snorkel:before { content: "\f109"; }
+.flaticon-011-reading:before { content: "\f10a"; }
+.flaticon-012-quilt:before { content: "\f10b"; }
+.flaticon-013-chess-1:before { content: "\f10c"; }
+.flaticon-014-poker:before { content: "\f10d"; }
+.flaticon-015-photo-camera:before { content: "\f10e"; }
+.flaticon-016-canvas:before { content: "\f10f"; }
+.flaticon-017-model:before { content: "\f110"; }
+.flaticon-018-music-player:before { content: "\f111"; }
+.flaticon-019-knitting:before { content: "\f112"; }
+.flaticon-020-kite:before { content: "\f113"; }
+.flaticon-021-necklace:before { content: "\f114"; }
+.flaticon-022-hiking:before { content: "\f115"; }
+.flaticon-023-toast:before { content: "\f116"; }
+.flaticon-024-gardening:before { content: "\f117"; }
+.flaticon-025-fishing:before { content: "\f118"; }
+.flaticon-026-sewing-1:before { content: "\f119"; }
+.flaticon-027-drum-set:before { content: "\f11a"; }
+.flaticon-028-sewing:before { content: "\f11b"; }
+.flaticon-029-dancing:before { content: "\f11c"; }
+.flaticon-030-crossword:before { content: "\f11d"; }
+.flaticon-031-crochet:before { content: "\f11e"; }
+.flaticon-032-cooking:before { content: "\f11f"; }
+.flaticon-033-coin:before { content: "\f120"; }
+.flaticon-034-pottery:before { content: "\f121"; }
+.flaticon-035-tent:before { content: "\f122"; }
+.flaticon-036-chess:before { content: "\f123"; }
