@@ -25,7 +25,7 @@ function changeDialValue (index, incrementBy) {
 
   let count = 0;
   for(let i = 0; i<4;++i){
-    if(lockState.wheels[i] == SECRET_COMBO[i])
+    if(lockState.wheels[i] === SECRET_COMBO[i])
       ++count;
   }
   // When the lock is set to match the secretCombo
