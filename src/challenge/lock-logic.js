@@ -25,6 +25,22 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+
+  if (lockState.wheels[index] === 0 && incrementBy < 0) {
+    lockState.wheels[index] = 9
+  } else {
+    lockState.wheels[index] = (lockState.wheels[index] + incrementBy) % 10
+  }
+  let unlocked = true
+  for (let i = 0; i < lockState.wheels.length; i++) {
+    if (lockState.wheels[i] !== SECRET_COMBO[i]) {
+      unlocked = false
+    }
+  }
+  lockState.locked = !(unlocked)
+  if (unlocked) {
+    redirect('advik-passi')
+  }
 }
 
 // let our other modules find our functions
