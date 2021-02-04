@@ -1,0 +1,81 @@
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  
+  .col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  @media (max-width: 700px) {
+    body {
+      flex-direction: column;
+    }
+    .col {
+      width: 100%;
+    }
+  }
+  
+  .col--left {
+    background-color: #324350;
+    color: var(--color-white);
+  }
+  
+  h1 {
+    font-family: 'Neuton', serif;
+    font-size: 6vw;
+    margin: 10px 0;
+  }
+  
+  .col--right {
+    background-color: #324350;
+  }
+  
+  .lobster {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  
+  .lobster img {
+    width: 75%;
+    height: 100%;
+  }
+  
+  .text {
+    padding: 0 20px;
+    text-align: justify;
+  }
+  
+  .text p:first-child {
+    margin-top: 0;
+  }
+  
+  @media (max-width: 700px) {
+    body {
+      flex-direction: column;
+    }
+    .col {
+      width: 100%;
+      padding: 20px 0;
+    }
+  
+    .col--left {
+      height: 20vh;
+    }
+  
+    .col--right {
+      height: calc(80vh - 80px);
+    }
+  }
+  
