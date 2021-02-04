@@ -1,5 +1,5 @@
-$('.datepicker').each(function(){
-	var picker = new Pikaday({
-		field: this
-	});
-});
+$('.datepicker').each(function () {
+  const picker = new Pikaday({
+    field: this
+  })
+})
