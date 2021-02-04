@@ -8,6 +8,27 @@ const lockState = window.mobx.observable({
 })
 
 function changeDialValue (index, incrementBy) {
+  lockState.wheels[index] += incrementBy
+  lockState.locked = false
+  let i = 0
+  let j = SECRET_COMBO.length - 1
+  while (i < j){
+    if(lockState.wheels[i] != SECRET_COMBO[i] || lockState.wheels[j] != SECRET_COMBO[j] ){
+      lockState.locked = true
+      break
+    }
+    i += 1
+    j -= 1
+  }
+
+  if(!lockState.locked){
+    redirect('kerim-kutuk')
+  }
+
+  
+
+
+
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by
@@ -15,6 +36,9 @@ function changeDialValue (index, incrementBy) {
   // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
   // for example, if the user clicked the "down" arrow for the last wheel
   // this will be called with arguments (3, -1).
+
+
+
 
   // to change the state of the lock, simply make a call like
   // lockState.locked = false
