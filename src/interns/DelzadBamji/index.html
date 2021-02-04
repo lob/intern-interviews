@@ -1,0 +1,71 @@
+<!-- Profile Page
+    Author:Delzad Bamji
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delzad Bamji Intern 2021</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="icon" href="openSeasseme.jpg" type="image/icon type" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  </head>
+  <body class="w3-container w3-center w3-animate-zoom">
+    <header class="pageTitle"><h1>Hello World!</h1></header>
+    <div class="container">
+      <div class="left-align">
+        <div>
+        <img src="delzadBamji.jpg" alt="Delzad Bamji" />
+        <div id="thug-life" class="thug-life"></div>
+        <div class="reach-out">
+          <p>Reach out to me at:</p>
+          <ul>
+            <li>delzadbamji[at]gmail[dot]com</li>
+            <li>db3765[at]rit[dot]edu</li>
+          </ul>
+        </div>
+        <div class="link-to-website">
+          <span>For more: </span>
+          <a href="https://delzadbamji.github.io/" target="_blank">
+            Click Here
+          </a>
+        </div>
+      </div>
+      </div>
+      <div class="right-align">
+        <div class="text-container">
+          <div class="headings">About Me:</div>
+          <p class="content">
+            My name is <strong><em>Delzad Bamji</em></strong>. I'm a Computer Science Student at RIT, NY.
+            I have a versatile codebase ranging from <u>Web Development, Problem-solving coding, Big Data, AI</u>, and more.
+            I'm familiar with various frameworks and tools too.
+          </p> 
+            
+          <p class="content"> 
+              Previously, I've interned at 'RBS, a product of Ahold Delhaize' as a 'FrontEnd Innovation Team Intern'.
+              I'm open to sharpening my skills, as well as learning new skills on the way.
+          </p>
+          <div class="headings">Types of softwares I like to create: </div>
+          <p class="content">
+            I like to create problem-solving applications and applications that can reduce manual workload. 
+            It's a bonus when one application can be used / modularized to help solve another problem. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let thug = document.getElementById("thug-life");
+      thug.addEventListener(
+        "webkitAnimationEnd",
+        function (event) {
+          thug.style.display = "none";
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
