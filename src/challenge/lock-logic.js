@@ -15,16 +15,27 @@ function changeDialValue (index, incrementBy) {
   // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
   // for example, if the user clicked the "down" arrow for the last wheel
   // this will be called with arguments (3, -1).
-
+  lockState.wheels[index] += incrementBy
   // to change the state of the lock, simply make a call like
   // lockState.locked = false
   // or lockState.wheels[1] = 2
   // the lock will re-render itself when the value changes
-
+  
+  
   // When the lock is set to match the secretCombo
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+  if (lockState.wheels[0] == 1) {
+    if (lockState.wheels[1] == 3) {
+      if (lockState.wheels[2] == 5) {
+        if (lockState.wheels[3] == 1) {
+          lockState.locked = false
+          redirect('steven-chen')
+        } else {lockState.locked = true}
+      } else {lockState.locked = true}
+    } else {lockState.locked = true}
+  } else {lockState.locked = true}
 }
 
 // let our other modules find our functions
