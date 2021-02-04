@@ -15,6 +15,7 @@ function changeDialValue (index, incrementBy) {
   // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
   // for example, if the user clicked the "down" arrow for the last wheel
   // this will be called with arguments (3, -1).
+  
 
   // to change the state of the lock, simply make a call like
   // lockState.locked = false
@@ -25,6 +26,29 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+
+  // This is used to change the value of each index
+  lockState.wheels[index] += incrementBy;
+  // This checks so that the values can't go above 9 or below 0, like a real lock
+  if (lockState.wheels[index] < 0) {
+    lockState.wheels[index] = 9;
+  }
+  if (lockState.wheels[index] > 9) {
+    lockState.wheels[index] = 0;
+  }
+
+  // Uses a for loop to compare every number in the wheels array with the SECRET_COMBO array
+  // If any value doesn't match, the for loop breaks, prevent false redirects
+  // If the for loop is able to get through all 4 numbers without breaking, the redirect will occur
+  for (i = 0; i < 4; i++) {
+    if (lockState.wheels[i] != SECRET_COMBO[i]) {
+      break;
+    }
+    if (i == 3) {
+      lockState.locked = false;
+	    redirect('larry-lobster');
+    }
+  }
 }
 
 // let our other modules find our functions
