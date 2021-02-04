@@ -48,7 +48,7 @@ function changeDialValue (index, incrementBy) {
   } else {
     lockState.locked = true
   }
-  if (lockState.locked) {
+  if (!lockState.locked) {
     redirect('Nishant Sapkota')
   }
 }
