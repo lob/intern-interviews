@@ -39,13 +39,13 @@ function changeDialValue (index, incrementBy) {
   // Uses a for loop to compare every number in the wheels array with the SECRET_COMBO array
   // If any value doesn't match, the for loop breaks, prevent false redirects
   // If the for loop is able to get through all 4 numbers without breaking, the redirect will occur
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < SECRET_COMBO.length; i++) {
     if (lockState.wheels[i] !== SECRET_COMBO[i]) {
       break
     }
-    if (i === 3) {
+    if (i === SECRET_COMBO.length - 1) {
       lockState.locked = false
-	    redirect('larry-lobster')
+      redirect('larry-lobster')
     }
   }
 }
