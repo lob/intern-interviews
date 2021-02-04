@@ -45,7 +45,7 @@ function changeDialValue (index, incrementBy) {
     }
     if (i === SECRET_COMBO.length - 1) {
       lockState.locked = false
-      redirect('larry-lobster')
+      redirect('tommy-ly')
     }
   }
 }
