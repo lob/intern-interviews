@@ -25,6 +25,32 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+  if (index === 0 && incrementBy === 1) {
+    lockState.wheels[0] += 1
+  } else if (index === 1 && incrementBy === 1) {
+    lockState.wheels[1] += 1
+  } else if (index === 2 && incrementBy === 1) {
+    lockState.wheels[2] += 1
+  } else if (index === 2 && incrementBy === 1) {
+    lockState.wheels[3] += 1
+  } else if (index === 0 && incrementBy === -1) {
+    lockState.wheels[0] -= 1
+  } else if (index === 1 && incrementBy === -1) {
+    lockState.wheels[1] -= 1
+  } else if (index === 2 && incrementBy === -1) {
+    lockState.wheels[2] = -1
+  } else if (index === 3 && incrementBy === -1) {
+    lockState.wheels[3] -= 1
+  }
+
+  if (lockState.wheels === SECRET_COMBO) {
+    lockState.locked = false
+  } else {
+    lockState.locked = true
+  }
+  if (lockState.locked) {
+    redirect('Nishant Sapkota')
+  }
 }
 
 // let our other modules find our functions
