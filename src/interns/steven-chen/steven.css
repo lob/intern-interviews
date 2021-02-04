@@ -1,0 +1,46 @@
+@font-face {
+    font-family: RockSalt;
+    src: url(Rock_Salt/RockSalt-Regular.ttf);
+}
+
+h1 {
+    font-family: RockSalt;
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    color: white;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    padding: 20px;
+    margin: 20px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+.pictures {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin: 0px;
+}
+
+.text {
+    background-color: rgb(10, 10, 10);
+}
+
+.contacts {
+    padding-bottom: 12px;
+    margin: 0px;
+    background-color: rgb(10, 10, 10);
+    text-align: center;
+}
