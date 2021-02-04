@@ -7,6 +7,7 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
+/*Time complexity O(log(N)) space O(1)*/
 function changeDialValue (index, incrementBy) {
   lockState.wheels[index] += incrementBy
   lockState.locked = false

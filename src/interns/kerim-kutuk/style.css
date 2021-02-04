@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: Poppins;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background: #34dddd;
+  padding: 10px 0 10px 0;
+}
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: #0a192f;
+}
+
+.navbar-brand a:hover {
+  color: white;
+}
+
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.navbar-link a {
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  margin-left: 15px;
+  font-size: 14px;
+  color: white;
+  background: #ffc800;
+  border-radius: 3px;
+  box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.288);
+}
+
+.navbar-link a:hover {
+  transform: translateY(-2px);
+}
+
+.navbar-link a:active {
+  color: black;
+  transform: translateY(2px);
+  box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.288);
+}
+
+.hero {
+}
+
+.hero .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hero .container .wrapper {
+  height: 90vh;
+  display: flex;
+}
+
+.hero-info {
+  flex: 1 1 60rem;
+}
+
+.up-info {
+  margin-top: 20px;
+}
+
+.up-info h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.up-info h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.down-info {
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.down-info .line {
+  border: 3px solid black;
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  flex: 1 1 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-wrapper {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.3);
+  border-radius: 50%;
+}
+
+.socials {
+  width: 40%;
+  margin-top: 15px;
+}
+
+.socials ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.socials ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.socials ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.socials ul li a i {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
