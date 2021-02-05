@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,600,700,400,800");
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  height: 100vh;
+}
+
+.main-image-div {
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  margin-right: 0px;
+}
+
+.main-image-div img {
+  width: 60vw;
+  height: 100vh;
+}
+
+.name-div {
+  background-color: rgb(61, 64, 61);
+  grid-column: 1/2;
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.name-div h1 {
+  color: rgb(198, 219, 238);
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: "Montserrat", Helvetica, Arial, serif;
+}
+
+.about-me-div {
+  grid-column: 1/2;
+  grid-row: 2/5;
+  background-color: rgb(61, 64, 61);
+}
+
+.about-me-div .body-text {
+  margin-left: 5em;
+  margin-right: 5em;
+  font-family: "Montserrat", Helvetica, Arial, serif;
+  color: rgb(198, 219, 238);
+}
+
+a {
+  color: antiquewhite;
+}
