@@ -9,7 +9,7 @@ const lockState = window.mobx.observable({
 
 function changeDialValue (index, incrementBy) {
   let futureDialValue = lockState.wheels[index] + incrementBy
-  if (futureDialValue !== -1) {
+  if (futureDialValue !== -1 && futureDialValue != 10) {
     lockState.wheels[index] = futureDialValue
   }
   if (JSON.stringify(lockState.wheels) === JSON.stringify(SECRET_COMBO)) {
