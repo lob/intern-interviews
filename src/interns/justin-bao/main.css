@@ -11,6 +11,7 @@
   --color-grayalt: #F8F9FA;
   --color-success: #6BC4A6;
   --color-error: #F76E40;
+  --color-justin: #c384ec;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
@@ -42,7 +43,7 @@ body {
 }
 
 .col--left {
-  background-color: var(--color-graydove);
+  background-color: var(--color-justin);
   color: var(--color-white);
 }
 
@@ -56,12 +57,12 @@ h1 {
   background-color: var(--color-grayblue);
 }
 
-.lobster {
+.justin {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.lobster img {
+.justin img {
   width: 25%;
   height: 100%;
 }
