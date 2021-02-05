@@ -9,13 +9,14 @@ const lockState = window.mobx.observable({
 
 // updates the value of the lock wheels according to the given increment
 function changeDialValue (index, incrementBy) {
-  const currValue = lockState.wheels[index];
-  lockState.wheels[index] = (currValue + incrementBy) % 10;  // mod 10 for overflow
+  const currValue = lockState.wheels[index]
+  // increment the wheel, then mod 10 for overflow (with adjustments for negative mods)
+  lockState.wheels[index] = (((currValue + incrementBy) % 10) + 10) % 10
 
   // check the JSON.stringify versions, which should be fine since we're dealing with ints
-  if (JSON.stringify(lockState.wheels) == JSON.stringify(SECRET_COMBO)) {
-    redirect('justin-bao');
-    lockState.locked = false;
+  if (JSON.stringify(lockState.wheels) === JSON.stringify(SECRET_COMBO)) {
+    redirect('justin-bao')
+    lockState.locked = false
   }
 }
 
