@@ -53,15 +53,15 @@ h1 {
 }
 
 .col--right {
-  background-color: var(--color-grayblue);
+  background-color: var(--color-cerulean);
 }
 
-.lobster {
+.naman {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.lobster img {
+.naman img {
   width: 25%;
   height: 100%;
 }

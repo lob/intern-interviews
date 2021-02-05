@@ -20,11 +20,22 @@ function changeDialValue (index, incrementBy) {
   // lockState.locked = false
   // or lockState.wheels[1] = 2
   // the lock will re-render itself when the value changes
-
+    
   // When the lock is set to match the secretCombo
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+    if (index>-1 && index<4){
+        lockState.wheels[index] = (lockState.wheels[index] + incrementBy)%10;
+        if (lockState.wheels[index]<0) lockState.wheels[index]+=10;
+    }
+
+    if(SECRET_COMBO.toString() === lockState.wheels.toString()){
+        lockState.locked = false;
+        redirect('naman-garg');
+    }
+
+    
 }
 
 // let our other modules find our functions
