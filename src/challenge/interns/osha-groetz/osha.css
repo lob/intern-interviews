@@ -1,6 +1,6 @@
 :root {
     --color-white: #ffffff;
-    --color-greyblue: #65799b;
+    --color-burgundy: #5a1f49;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap");
@@ -32,37 +32,55 @@ body {
 }
 
 .col--top {
-    background: linear-gradient(-90deg, #65799b, #5e2563);
-    color: var(--color-white);
+    /* background: linear-gradient(-50deg, #ea6060, #7117ea); */
+    position: relative;
+    height: 45vh;
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 32vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 32vh, 0 100%);
+    background: linear-gradient(-150deg, #f57676, #fce38a);
+    color: var(--color-burgundy);
+}
+.header__components {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    /* margin-bottom: 48px; */
+}
+
+.header__components img {
+    width: 15%;
+    height: 100%;
+    border-radius: 50%;
+    margin-left: 3em;
 }
 
 h1 {
     font-family: "Neuton", serif;
     font-size: 6vw;
-    margin: 10px 0;
+    margin: 60px 0.5em;
+    /* width: 1000px; */
 }
 
 .col--bottom {
-    background-color: var(--color-greyblue);
+    background-color: var(--color-burgundy);
     /* background: linear-gradient(-90deg, #f02fc2, #6094EA); */
     color: var(--color-white);
+    height: 70vh;
+    margin-top: -10em;
 }
 
-.lobster {
-    text-align: center;
-    width: 15%;
-    /* margin-bottom: 48px; */
-}
-
-.lobster img {
-    width: 75%;
-    height: 100%;
-    border-radius: 50%;
+h3 {
+    color: #f57676;
+    text-decoration: underline;
 }
 
 .text {
-    padding: 0 20px;
-    text-align: justify;
+    padding: 0 10px;
+    margin-right: -40%;
+    text-align: end;
+    width: 50%;
 }
 
 .text p:first-child {
