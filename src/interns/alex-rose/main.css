@@ -1,0 +1,44 @@
+#art {
+    width: 50%;
+    height: 50%;
+    min-width: 300px;
+    min-height: 300px;
+    margin: 0 auto;
+    display: block;
+}
+h1, h2{
+    color: #00CCB3;
+    text-align: center;
+}
+body {
+    background: #0B3E6C;
+}
+
+/* Forgot where I found this trick, but individually styles the numbers */
+ol li {
+    counter-increment: steps
+}
+ol li:before {
+    content: counter(steps) ". ";
+    color: #00CCB3;
+    font-size: 20px;
+}
+ol {
+    list-style: none;
+    counter-reset: steps;
+    display: table; /* because text align is wack for lists */
+    margin: 0 auto;
+}
+
+p, li {
+    color: white;
+    font-size: 16px;
+}
+li::first-letter {
+    color: #00CCB3;
+}
+p {
+    text-align: center;
+    margin-left: 50px;
+    width: 85%;
+}
