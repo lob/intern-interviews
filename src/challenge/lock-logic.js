@@ -8,6 +8,19 @@ const lockState = window.mobx.observable({
 })
 
 function changeDialValue (index, incrementBy) {
+  // body > div.combination > div:nth-child(4) > input
+  // document.getElementsByClassName("digit")[index]
+  // debugger
+
+  dialValue = parseInt(document.getElementsByClassName("digit")[index].value)
+
+  if (incrementBy === 1 && parseInt(document.getElementsByClassName("digit")[index].value) < 9) {
+    document.getElementsByClassName("digit")[index].value = parseInt(document.getElementsByClassName("digit")[index].value) + incrementBy
+  }
+  
+  if (incrementBy === -1 && dialValue > 0) {
+    document.getElementsByClassName("digit")[index].value = parseInt(document.getElementsByClassName("digit")[index].value) + incrementBy
+  }
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by
