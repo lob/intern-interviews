@@ -25,6 +25,18 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+
+  // My code is inserted below!
+  lockState.wheels[index] = ((lockState.wheels[index] % 10) + incrementBy) % 10 // handles negative modulo correctly also
+
+  const correctCombo = (SECRET_COMBO.length === lockState.wheels.length) && SECRET_COMBO.every(function (element, index) {
+    return element === lockState.wheels[index] // check if both arrays have the same sorted contents
+  })
+
+  if (correctCombo) {
+    lockState.locked = false // redirect function will redirect if lockState is unlocked
+    redirect('nathanjamesbasa')
+  }
 }
 
 // let our other modules find our functions
