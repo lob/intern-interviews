@@ -1,11 +1,12 @@
 # Intern Interviews
 ## Directions
 - Please duplicate this respository as a private repo in your own GitHub account.
-- On your version, please add [Alex Strachan](https://github.com/metalsheep/), [Sasha Ashpis](https://github.com/sasha-ashpis), [Roman Kofman](https://github.com/rkofman-lob), and [Nina Hwang](https://github.com/nihwang) to have write permissions.
 - Write your profile page (see details under [Profile Page](#profile-page))
 - Author your code (see details under [Code Challenge](#code-challenge))
 - Submit a pull request to your repo's `main` branch with your changes.
-- tag [Alex Strachan](https://github.com/metalsheep/), [Sasha Ashpis](https://github.com/sasha-ashpis), [Roman Kofman](https://github.com/rkofman-lob), and [Nina Hwang](https://github.com/nihwang) as reviewers.
+- On github, please add [Nina Hwang](https://github.com/nihwang), [Alex Strachan](https://github.com/metalsheep/), [Roman Kofman](https://github.com/rkofman-lob), and [Sasha Ashpis](https://github.com/sasha-ashpis) to have write permissions.
+- Tag [Nina Hwang](https://github.com/nihwang), [Alex Strachan](https://github.com/metalsheep/), [Roman Kofman](https://github.com/rkofman-lob), and [Sasha Ashpis](https://github.com/sasha-ashpis), as reviewers on your PR.
+- Provide a link to your created PR when submitting your application
 
 ## Profile Page
 Make a folder for yourself with your name inside `/src/interns/`.
