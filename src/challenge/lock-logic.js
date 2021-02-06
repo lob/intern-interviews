@@ -7,24 +7,42 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
+// Function for verifying if the correct password has been entered
+function isCorrectPassword (combo, wheels) {
+  for (let i = 0; i < combo.length; i++) {
+    if (combo[i] !== wheels[i]) {
+      return false
+    } else {
+      continue
+    }
+  }
+  return true
+}
+
+// Switches on the index parameter to determine which wheel should be incremented
 function changeDialValue (index, incrementBy) {
-  // This part is missing some code
-  // This function is automatically called when the user clicks on a chevron
-  // it will be called with a wheel index and an amount to change the value by
-  // for example, if a user clicks on the "up" arrow for wheel 0
-  // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
-  // for example, if the user clicked the "down" arrow for the last wheel
-  // this will be called with arguments (3, -1).
+  switch (index) {
+    case '0':
+      lockState.wheels[0] += incrementBy
+      break
+    case '1':
+      lockState.wheels[1] += incrementBy
+      break
+    case '2':
+      lockState.wheels[2] += incrementBy
+      break
+    case '3':
+      lockState.wheels[3] += incrementBy
+      break
+    default:
+      break
+  }
 
-  // to change the state of the lock, simply make a call like
-  // lockState.locked = false
-  // or lockState.wheels[1] = 2
-  // the lock will re-render itself when the value changes
-
-  // When the lock is set to match the secretCombo
-  // call the redirect() function with your name
-  // eg: redirect('larry-lobster')
-  // the redirect function will only redirect if the lockState is unlocked
+  // Checks to see if the lock has been unlocked by the correct combo and, if so, redirects to Cam
+  if (isCorrectPassword(SECRET_COMBO, lockState.wheels)) {
+    lockState.locked = false
+    redirect('Cam')
+  }
 }
 
 // let our other modules find our functions
