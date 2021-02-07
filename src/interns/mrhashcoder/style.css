@@ -1,0 +1,492 @@
+body {
+  background-color: #122;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Baloo Da 2", cursive;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 5px dotted #2ff;
+  display: inline-block;
+  line-height: 0.8;
+}
+
+.float-right {
+  float: right;
+}
+
+.font-sm {
+  font-size: 1.5vw;
+}
+
+.font-smm {
+  font-size: 1.1vw;
+}
+
+.bordered-box {
+  margin: 30px;
+  padding: 15px;
+  border: 2px dotted #2ff;
+}
+
+a.icon-link {
+  color: inherit;
+  text-decoration: none;
+  border: none;
+}
+
+.heff:hover {
+  transform-origin: left;
+  transform: scale(1.05) translate(-50%, -50%);
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.rotate-cw {
+  animation: rotation-clockwise 40s infinite linear;
+}
+
+@keyframes rotation-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rotate-acw {
+  animation: rotation-anticlockwise 40s infinite linear;
+}
+
+@keyframes rotation-anticlockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
+
+.rotate-cw-fast {
+  animation: rotation-clockwise-fast 10s infinite linear;
+}
+
+@keyframes rotation-clockwise-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#prevPageBtn,
+#nextPageBtn {
+  position: fixed;
+  left: 50%;
+  width: 50px;
+  cursor: pointer;
+}
+
+#prevPageBtn {
+  transform: translateX(-50%);
+  top: 0;
+}
+
+#nextPageBtn {
+  bottom: 0;
+  transform: rotateZ(180deg) translateX(50%);
+}
+
+.leftBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 1s;
+}
+
+.rightBox {
+  display: none;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  transition: 1s;
+}
+
+#welcomePage .rightBox .content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#welcomePage .rightBox .content:not(#aboutContent) {
+  display: none;
+}
+
+#welcomePage .rightBox {
+  font-size: 2.5vw;
+  color: #2ff;
+}
+
+#welcomeBox {
+  position: relative;
+  height: 320px;
+  width: 320px;
+  left: 50%;
+  top: 50%;
+  --welcomeScaler: 1;
+  transform: translate(-160px, -160px) scale(var(--welcomeScaler));
+  text-align: center;
+  transition: 1s;
+}
+
+#welcomeBox:hover {
+  --welcomeScaler: 1.05;
+}
+
+.dashedCircle {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  height: 90%;
+  width: 90%;
+}
+
+.dottedCircle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.welcomeMessage {
+  display: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: #2ff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#nav {
+  display: none;
+}
+
+#nav .forSelected {
+  display: none;
+}
+
+#nav .selected .forSelected {
+  display: block;
+}
+
+#nav .selected .rotate-cw {
+  display: none;
+}
+
+#nav .option {
+  color: #2ff;
+  font-size: 20px;
+  position: fixed;
+  height: 150px;
+  width: 150px;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transition: 100ms;
+  background-color: #122;
+  border-radius: 75px;
+  --nav-option-scaler: 1;
+  --nav-option-tx: 0;
+  --nav-option-ty: 0;
+  transform: translate(var(--nav-option-tx), var(--nav-option-ty))
+    scale(var(--nav-option-scaler));
+  cursor: pointer;
+}
+
+#nav .option:hover {
+  --nav-option-scaler: 1.2;
+}
+
+#nav .option img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#nav .option p {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#aboutNav {
+  --nav-option-tx: -22px !important;
+  --nav-option-ty: -275px !important;
+}
+
+#experienceNav {
+  --nav-option-tx: 111px !important;
+  --nav-option-ty: -158px !important;
+}
+#educationNav {
+  --nav-option-tx: 111px !important;
+  --nav-option-ty: 15px !important;
+}
+#projectsNav {
+  --nav-option-tx: -22px !important;
+  --nav-option-ty: 125px !important;
+}
+
+#contactNav {
+  --nav-option-tx: -200px !important;
+  --nav-option-ty: 90px !important;
+}
+
+#resumeNav {
+  --nav-option-tx: -200px !important;
+  --nav-option-ty: -240px !important;
+}
+
+#skillsNav {
+  --nav-option-tx: -280px !important;
+  --nav-option-ty: -75px !important;
+}
+
+.schoolDiv .font-sm {
+  padding-top: 20px;
+}
+
+#previewBtn {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  border: 5px dotted #2ff;
+  background-color: #122;
+  color: #2ff;
+  font-size: 20px;
+  right: 50px;
+  top: 20px;
+}
+
+#downloadBtn {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  border: 5px dotted #2ff;
+  background-color: #122;
+  color: #2ff;
+  font-size: 20px;
+  right: 50px;
+  top: 120px;
+}
+
+#resumeContent .resumePreview {
+  width: 600px;
+  height: 90%;
+}
+
+button:hover {
+  border: 5px solid #2ff !important;
+}
+
+#contactContent ion-icon {
+  font-size: 2.5vw;
+  width: 100px;
+  color: #2ff;
+}
+
+#contactContent table {
+  font-size: 2vw;
+  color: #2ff;
+}
+
+#skillsContent canvas {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1300px) {
+  body {
+    overflow-y: auto;
+  }
+
+  a {
+    border-bottom: 2px dotted #2ff;
+    line-height: 0.8;
+  }
+
+  .font-sm {
+    font-size: 20px;
+  }
+
+  .font-smm {
+    font-size: 16px;
+  }
+
+  .bordered-box {
+    margin: 10px;
+    padding: 10px;
+    border: 1px dotted #2ff;
+  }
+
+  a.icon-link {
+    color: inherit;
+    text-decoration: none;
+    border: none;
+  }
+
+  .heff:hover {
+    transform-origin: left;
+    transform: scale(1.05) translate(-50%, -50%);
+    cursor: pointer;
+    transition: 100ms;
+  }
+
+  .leftBox {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+
+  .rightBox {
+    position: relative;
+    display: none;
+    width: 100%;
+    top: auto;
+    left: 0;
+    height: auto;
+  }
+
+  #welcomePage .rightBox .content {
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 20px;
+  }
+
+  #welcomePage .rightBox {
+    font-size: 30px;
+    color: #2ff;
+  }
+
+  #welcomeBox {
+    --welcomeScaler: 0.8;
+    transform: translate(-160px, -160px) scale(var(--welcomeScaler));
+  }
+
+  #welcomeBox:hover {
+    --welcomeScaler: 0.9;
+  }
+
+  .schoolDiv .font-sm {
+    padding-top: 10px;
+  }
+
+  #previewBtn {
+    position: relative;
+    width: auto;
+    height: 50px;
+    border: 2px dotted #2ff;
+    font-size: 20px;
+    left: 0;
+    top: auto;
+    margin-top: 10px;
+  }
+
+  #downloadBtn {
+    margin-top: 10px;
+    position: relative;
+    width: auto;
+    height: 50px;
+    border: 2px dotted #2ff;
+    right: 0;
+    top: auto;
+    font-size: 20px;
+  }
+
+  #resumeContent .resumePreview {
+    width: 100%;
+    max-width: 800px;
+    height: 127vw;
+    max-height: 1130px;
+  }
+
+  button:hover {
+    border: 2px solid #2ff !important;
+  }
+
+  #contactContent ion-icon {
+    font-size: 30px;
+    width: 100px;
+    color: #2ff;
+  }
+
+  #contactContent table {
+    font-size: 30px;
+    color: #2ff;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .font-sm {
+    font-size: 3vw;
+  }
+
+  .font-smm {
+    font-size: 2.8vw;
+  }
+
+  #welcomePage .rightBox .content {
+    transform: none;
+    padding: 10px;
+  }
+
+  #welcomePage .rightBox {
+    font-size: 3.5vw;
+    color: #2ff;
+  }
+
+  #welcomeBox {
+    --welcomeScaler: 0.6;
+    transform: translate(-160px, -160px) scale(var(--welcomeScaler));
+  }
+
+  #welcomeBox:hover {
+    --welcomeScaler: 0.7;
+  }
+
+  .schoolDiv .font-sm {
+    padding-top: 10px;
+  }
+
+
+  #contactContent ion-icon {
+    font-size: 4vw;
+    width: 50px;
+  }
+
+  #contactContent table {
+    font-size: 4vw;
+  }
+}

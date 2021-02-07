@@ -1,0 +1,261 @@
+<html>
+  <head>
+    <title>mrhashcoder</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- <img id="prevPageBtn" src="./assets/prevPageBtnAnimation.gif" />
+    <img id="nextPageBtn" src="./assets/prevPageBtnAnimation.gif" /> -->
+    <div id="welcomePage">
+      <div class="leftBox">
+        <div id="welcomeBox">
+          <img class="rotate-cw dashedCircle" src="./assets/dashedCircle.png" />
+          <img
+            class="rotate-acw dottedCircle"
+            src="./assets/dottedCircle.png"
+          />
+          <p class="welcomeMessage"></p>
+          <div id="nav">
+            <div
+              class="option selected"
+              id="aboutNav"
+              data-target="#aboutContent"
+            >
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>About</p>
+            </div>
+            <div
+              class="option"
+              id="experienceNav"
+              data-target="#experienceContent"
+            >
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>Experience</p>
+            </div>
+            <div
+              class="option"
+              id="educationNav"
+              data-target="#educationContent"
+            >
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>Education</p>
+            </div>
+            <div class="option" id="projectsNav" data-target="#projectsContent">
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>Projects</p>
+            </div>
+            <div class="option" id="contactNav" data-target="#contactContent">
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>Contact</p>
+            </div>
+            <div class="option" id="resumeNav" data-target="#resumeContent">
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>Resume</p>
+            </div>
+            <div class="option" id="skillsNav" data-target="#skillsContent">
+              <img class="rotate-cw" src="./assets/dottedCircle.png" />
+              <img
+                class="rotate-cw-fast forSelected"
+                src="./assets/dashedCircleHeavy.png"
+              />
+              <p>Skills</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightBox">
+        <div class="content" id="aboutContent">
+          <p>Hi, I am Abhishek</p>
+          <p>
+            I am a Software Developer. I have been creating many Web and Dev Projects from
+            the past 2 years. Currently, I am pursuing my B.Tech. in Computer
+            Engineering at
+            <a target="_blank" href="https://nitkkr.ac.in">NIT, Kurukshetra</a>.
+          </p>
+        </div>
+        <div class="content" id="experienceContent">          
+          <div class="xpDiv bordered-box">
+            <p>FreeLance Developer <span class="font-sm">[March '20 - July '20]</span></p>
+            <a class="font-sm" target="_blank" href="https://calinfo.in"
+              >CAL Info - FreeLancing Company in Kurukshetra</a
+            >
+            <ul class="font-sm">
+              <li>Done Projects of Backend and Frontend Development</li>
+              <li>Got a Company Experience during Lockdown.</li>
+            </ul>
+          </div>
+          <div class="xpDiv bordered-box">
+            <p>Full Stack Developer<span class="font-sm">[May '20 - Present]</span></p>
+            <a class="font-sm" target="_blank" href="http://kodeflix.tech"
+              >KodeFlix</a
+            >
+            <ul class="font-sm">
+              <li>Developing web apps for the projects of our group.</li>
+              <li>Also Organising Coding Competitions for Collage Students</li>
+              <li>Helping Begginers to learn and Practice Competitve Programming</li>
+            </ul>
+          </div>
+        </div>
+        <div class="content" id="educationContent">
+          <div class="schoolDiv bordered-box">
+            <a href="#">B.Tech.</a>
+            <p class="float-right">7.5 CGPA</p>
+            <p class="font-sm">
+              National Institute of Technology, Kurukshetra
+            </p>
+            <p class="font-sm">
+              [Computer Engineering]
+            </p>
+          </div>
+          <div class="schoolDiv bordered-box">
+            <a href="#">12th</a>
+            <p class="float-right">91.00 %</p>
+            <p class="font-sm">
+              Pragati Senior Secondary School, Sikar
+            </p>
+          </div>
+          <div class="schoolDiv bordered-box">
+            <a href="#">10th</a>
+            <p class="float-right">92.50 %</p>
+            <p class="font-sm">
+              Pragati Senior Secondary School, Sikar
+            </p>
+          </div>
+        </div>
+        <div class="content" id="projectsContent">
+          <div class="projectDiv bordered-box">
+            <a class="font-sm"
+              target="_blank"
+              href="https://github.com/mrhashcoder/HosMan"
+              >HosMan</a
+            >
+            <ul class="font-smm">
+              <li>This is a Advanced Hostel Management System. Will Be used to Organize and Connect Hostellers to Hostel
+                  Adminstration. 
+              </li>
+
+              <li>Functionallities::
+                <ul>
+                  <li>Whatsapp Authentication and Email Authentication</li>
+                  <li>Only Verified Hostellers will be Part of Hostel</li>
+                  <li>Notice Board , Rebate and Message System B/W Hostller and Warden</li>
+                  <li>Mess Bill and Mess Payment</li>
+                </ul>
+              </li>
+              <li>Tech Used: ReactJS, Redux, NodeJS, ExpressJs, MongoDb, Cloudinary, Twilio</li>
+            </ul>
+          </div>
+          <div class="projectDiv bordered-box">
+            <a class="font-sm"
+              target="_blank"
+              href="https://github.com/mrhashcoder/ApiGenerator"
+              >ApiGenerator</a
+            >
+            <ul class="font-smm">
+              <li>Its a Web Application which takes data as input and host that data over API. A simple approach to crreate Firebase Replica</li>
+              <li>You can create Database and Collection in there and Accese everything over Api</li>
+              <li>Tech Used: NodeJs, ExpressJS, MongoDb </li>
+            </ul>
+          </div>
+          <div class="projectDiv bordered-box">
+            <a class="font-sm"
+              target="_blank"
+              href="https://github.com/mrhashcoder/CodeSynx"
+              >CodeSynx</a
+            >
+            <ul class="font-smm">
+              <li>
+                This is a Collabrative Coding Platform Where Two and more Coders can Code on single file
+              </li>
+              <li>
+                Can be usefull for Sharing coding b/w friends and for teaching Propose/
+              </li>
+              <li>Tech Used: NodeJS(ExpressJS), Cloudinary, Bootstrap, SocketIO</li>
+            </ul>
+          </div>
+        </div>
+        <div class="content" id="contactContent">
+          <div class="bordered-box">
+            <table>
+              <tr>
+                <td>
+                  <a class="icon-link" target="_blank" href="mailto:abhie8101@gmail.com.com"><ion-icon name="mail-outline"></ion-icon></a></td>
+                <td>abhie8101@gmail.com</td>
+              </tr>
+              <tr>
+                <td><a class="icon-link" target="_blank" href="https://github.com/mrhashcoder"><ion-icon name="logo-github"></ion-icon></a></td>
+              </td>
+                <td>mrhashcoder</td>
+              </tr>
+              <tr>
+                <td><a class="icon-link" target="_blank" href="https://linkedin.com/in/abhie8101"><ion-icon name="logo-linkedin"></ion-icon></a></td>
+                <td>Abhishek Sharma</td>
+              </tr>
+              <tr>  
+                <td><a class="icon-link" target="_blank" href="https://www.instagram.com/mrhashcoder"><ion-icon name="logo-instagram"></ion-icon></a></td>
+                <td>mrhashcoder</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="content" id="resumeContent">
+          <iframe class="resumePreview"
+            src="https://drive.google.com/file/d/1c5Plq6a6DeYLnuVW42WLn5rrKPg63YXe/preview"
+          ></iframe>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1c5Plq6a6DeYLnuVW42WLn5rrKPg63YXe/preview"
+          >
+            <button id="previewBtn">
+              Preview
+            </button>
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1c5Plq6a6DeYLnuVW42WLn5rrKPg63YXe/view"
+          >
+            <button id="downloadBtn">
+              Download
+            </button>
+          </a>
+        </div>
+        <div class="content" id="skillsContent">
+          <canvas></canvas>
+        </div>
+      </div>
+    </div>
+    <div id=""></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./logic.js"></script>
+    <script src="./canvas.js" type="module"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>
