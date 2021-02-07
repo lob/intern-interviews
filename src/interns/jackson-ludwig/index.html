@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport content="width=device-width, initial-scale=1.0">
+        <title>Jackson Ludwig</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+              href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/monokai-sublime.min.css">
+        <link rel="stylesheet"
+              href="resources/style.css">
+    </head>
+    <body>
+
+        <section>
+
+            <div id="header">
+                <h1><span class="underline">Jackson Ludwi</span>g</h1>
+                <span><a class="plink" id="resume-link" target="_blank" href="resources/ResumeForSite.pdf">resume</a> /
+                    <a class="plink" target="_blank" href="https://www.linkedin.com/in/jackson-ludwig-6795b11b5/">linkedin</a> /
+                    <a class="plink" target="_blank" href="mailto:jacksonludwig0@gmail.com">email</a> /
+                    <a class="plink" target="_blank" href="https://github.com/jacksonludwig">GitHub</a></span>
+            </div>
+
+            <div id="summary">
+                <h2 id="summary-head">Summary</h2>
+                <p>I have experience in a wide array of programming disciplines, such as web backend/frontend, mobile development, desktop applications, and game programming.</p>
+                <p>I am extremely passionate and capable of learning new languages and technologies, as well as working in teams with and without programming backgrounds.</p>
+            </div>
+
+            <div class="container">
+                <div>
+                    <img id="profile" src="resources/personal_pic.jpg" alt="picture of me"/>
+                    <p class="icon-title">Me</h3>
+                </div>
+            </div>
+
+            <div class="snippet-title">
+                <h2>Code Snippets</h2>
+                <p>Some snapshots of my personal projects. For more examples please see my <a target="_blank" href="https://github.com/jacksonludwig">GitHub</a>.</p>
+            </div>
+
+            <div class="snippet-item" id="rust-example">
+                <pre><code class="rust">
+/// Generates an MD5-Hashed signature required for API queries.
+fn make_signature(dev_id: &#38;str, methodname: &#38;str, token: &#38;str, time: &#38;str) -&gt; String {
+    let unhashed_signature = format!("{}{}{}{}", dev_id, methodname, token, time);
+    let bytes = unhashed_signature.as_bytes();
+    format!("{:x}", md5::compute(bytes))
+}
+                </code></pre>
+            </div>
+            <div id="rust-desc" class="snippet-item">
+                <p>
+                This is from my program to interface with the <a target="_blank" href="https://www.hirezstudios.com/">Hi-Rez</a> Developer API.
+                This function creates a unique signature so a developer can access the API.<br><a class="project-link" href="https://github.com/jacksonludwig/smite_api_library" target="_blank">repo link</a>
+                </p>
+            </div>
+
+            <div class="snippet-item" id="java-example">
+                <pre><code class="java">
+private void fetchFavorites() {
+    db.collection("userdata")
+            .document(user.getEmail())
+            .collection("favorites")
+            .get()
+            .addOnCompleteListener(new OnCompleteListener&lt;QuerySnapshot&gt; {
+                @Override
+                public void onComplete(@NonNull Task&lt;QuerySnapshot&gt; task) {
+                    if (task.isSuccessful()) {
+                        favoritesMap = new HashMap&lt;&gt;();
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            College college = document.toObject(College.class);
+                            favoritesMap.put(String.valueOf(college.getId()), college);
+                        }
+                    } else
+                        Log.d(TAG, "Error getting documents: ", task.getException());
+                }
+            });
+}
+                </code></pre>
+            </div>
+            <div id="java-desc" class="snippet-item">
+                <p>This method retrieves a user's list of favorite colleges from a NoSQL database.<br><a class="project-link" href="https://github.com/jacksonludwig/College-Application-System" target="_blank">repo link</a></p>
+            </div>
+
+            <div class="snippet-item" id="python-example">
+                <pre><code class="python">
+@client.command()
+async def help(context):
+    embed = discord.Embed(
+        title="HELP",
+        color=discord.Color.green()
+    )
+    embed.add_field(
+        name="#build", value="Say #build followed by god name, e.g.\n \"#build anubis\"")
+
+    embed.set_footer(text="https://github.com/jacksonludwig/SmiteBotBetter")
+
+    await context.send(embed=embed)
+                </code></pre>
+            </div>
+            <div id="python-desc" class="snippet-item">
+                <p>From my <a target="_blank" href="https://discord.com/">Discord</a> bot. This async function creates the UI that the user will see when they execute the "help" command.<br><a class="project-link" href="https://github.com/jacksonludwig/SmiteBotBetter" target="_blank">repo link</a></p>
+            </div>
+
+             <hr>
+
+            <div class="container">
+                <div>
+                    <img src="resources/monitor.svg" alt="desktop"/>
+                    <h3 class="icon-title">Desktop</h3>
+                </div>
+                <div>
+                    <img src="resources/smartphone.svg" alt="mobile"/>
+                    <h3 class="icon-title">Mobile</h3>
+                </div>
+                <div>
+                    <img src="resources/layout.svg" alt="web"/>
+                    <h3 class="icon-title">Web</h3>
+                </div>
+                <div>
+                    <img src="resources/database.svg" alt="database"/>
+                    <h3 class="icon-title">Database</h3>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
