@@ -1,0 +1,38 @@
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   margin-bottom: 50px;
+}
+
+.block1 {
+   background-color:black; 
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+ }
+
+.img-text {
+   padding: 60px 0;
+   color:white;
+}
+
+h2, h1 {
+   text-align: center;
+   margin: 10px;
+}
+
+p {
+   text-align: justify;
+   margin: 10px;
+}
+
+ .header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   background-color:black;
+   color: white;
+   text-align: center;
+ }
