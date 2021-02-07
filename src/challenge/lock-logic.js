@@ -25,6 +25,19 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+
+  // -------------------------------------
+  // My solution below
+
+  // First, enable the dials to move
+  lockState.wheels[index] = lockState.wheels[index] + incrementBy;
+
+  // Next, check to see if we should open the lock and redirect to our page.
+  if (JSON.stringify(SECRET_COMBO) === JSON.stringify(lockState.wheels)) {
+    lockState.locked = false;
+    redirect('jackson-ludwig');
+  }
+  
 }
 
 // let our other modules find our functions
