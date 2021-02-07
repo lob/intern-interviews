@@ -25,6 +25,12 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+  lockState.wheels[index] += incrementBy;
+  const cloneToJS = window.mobx.toJS(lockState);
+  if(cloneToJS.wheels.every((val, index) => val === SECRET_COMBO[index])){
+    lockState.locked = false;
+    redirect('Pranitha-Amrutha-Veldanda');
+  }
 }
 
 // let our other modules find our functions
