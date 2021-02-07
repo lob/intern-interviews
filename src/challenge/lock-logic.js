@@ -36,7 +36,7 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
-  lockState.wheels[index] += incrementBy
+  lockState.wheels[index] = lockState.wheels[index] < 9 ? lockState.wheels[index] + incrementBy : 0
   if (compArrays(lockState.wheels, SECRET_COMBO)) {
     // redirect to profile
     lockState.locked = false
