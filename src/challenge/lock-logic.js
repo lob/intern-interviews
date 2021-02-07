@@ -21,10 +21,24 @@ function changeDialValue (index, incrementBy) {
   // or lockState.wheels[1] = 2
   // the lock will re-render itself when the value changes
 
+  lockState.wheels[index] += incrementBy
+
+  let isLocked = false
+  for (let i = 0; i < SECRET_COMBO.length; i++) {
+    if (SECRET_COMBO[i] !== lockState.wheels[i]) {
+      isLocked = true
+      break
+    }
+  }
+  lockState.locked = isLocked
+
   // When the lock is set to match the secretCombo
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+  if (!lockState.locked) {
+    redirect('madhav-aggarwal')
+  }
 }
 
 // let our other modules find our functions
