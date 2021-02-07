@@ -7,6 +7,17 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
+function compArrays (a1, a2) {
+  index = 0
+  while(index < a1.length){
+    if (a1[index] !== a2[index]){
+      return false
+    }
+    index += 1
+  }
+  return true
+}
+
 function changeDialValue (index, incrementBy) {
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
@@ -26,7 +37,7 @@ function changeDialValue (index, incrementBy) {
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
   lockState.wheels[index] += incrementBy
-  if (lockState.wheels === SECRET_COMBO) {
+  if (compArrays(lockState.wheels, SECRET_COMBO)) {
     // redirect to profile
     lockState.locked = false
     redirect('finlay-piroth')
