@@ -1,0 +1,82 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    background-color: #FBE8A6;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+#profile-background {
+    width: 100%;
+    background-color:#303c6c;
+    height: 550px;
+    margin: 0;
+    padding: 10px;
+    color: #b4dfe5;
+}
+
+.card {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    max-width: 300px;
+    padding-top: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #b4dfe5;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.main-content {
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    padding-top: 20px;
+    background-color: #fcdaa6;
+    padding:10px;
+    border-radius: 3%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+#tech-exps {
+    text-align: left;
+}
+
+#skills {
+    text-align: left;
+}
+
+#conclusion {
+    margin-top: 50px;
+}
+
+#bottom-bar {
+    bottom: 0;
+    text-align: center;
+    margin-top: 100px;
+    padding: 5px;
+    background-color: #303c6c;
+    color: #b4dfe5;
+}
+#my-name{
+    color:#b4dfe5;
+}
+
+h1,h3 {
+    color: #303c6c;
+}
