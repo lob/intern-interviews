@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfilePicComponent } from './profile-pic/profile-pic.component';
 import { TitleComponent } from './title/title.component';
+import { TextComponent } from './text/text.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfilePicComponent,
-    TitleComponent
+    TitleComponent,
+    TextComponent
   ],
   imports: [
     BrowserModule,

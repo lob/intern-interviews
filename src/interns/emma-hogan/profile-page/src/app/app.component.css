@@ -1,0 +1,14 @@
+.container {
+    display:flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.pro-pic {
+    width: 50%;
+    display:inline-block;
+}
+.text {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
