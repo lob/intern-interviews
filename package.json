@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "package-lock.json": "^1.0.0",
+    "package.json": "^2.0.1",
     "standard": "^16.0.3"
   }
 }
