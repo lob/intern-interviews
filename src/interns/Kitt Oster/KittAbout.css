@@ -1,0 +1,53 @@
+titleBar {
+  display: block;
+  font-family: Copperplate, fantasy, Arial-Black, Arial, Helvetica, sans-serif;
+  font-size: min(25vh, 12.5vw);
+  font-weight: bold;
+  text-align: center;
+  background-color: #49416D;
+  color: #DB5461;
+  height: min(30vh, 15vw);
+  width: 100vw;
+}
+
+columns {
+  background-color: #E1F2FE;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: min(5vh, 2.5vw);
+  color: #5A0001;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+left {
+  width: 100%;
+  height: 50%;
+  order: 1;
+  flex: 1 1 auto;
+}
+
+right {
+  width: 100%;
+  height: 50%;
+  order: 2;
+  flex: 1 1 auto;
+}
+
+@media screen and (min-width: 700px){
+  columns {
+    flex-flow: row;
+  }
+  
+  left{
+    width: 50%;
+    height: 100%;
+  }
+  right {
+    width: 50%;
+    height: 100%;
+  }
+}
