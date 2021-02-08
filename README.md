@@ -1,3 +1,7 @@
+# DEAR TEAM LOB
+- Please run ```npm install ``` before opening the profile page. I have install node-sass in order to use scss files for styling
+
+
 # Intern Interviews
 ## Directions
 - Please duplicate this respository as a private repo in your own GitHub account.
