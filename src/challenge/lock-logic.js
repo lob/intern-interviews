@@ -7,8 +7,6 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
-let lockValue = []
-
 function changeDialValue (index, incrementBy) {
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
@@ -34,7 +32,7 @@ function changeDialValue (index, incrementBy) {
   lockState.wheels[index] = lockState.wheels[index] + incrementBy
 
   // This line gets the array target from the lockState.wheels proxy and convert it from an object to an array and assign it to the variable lockValue
-  lockValue = Object.values(Object.assign({}, lockState.wheels))
+  const lockValue = Object.values(Object.assign({}, lockState.wheels))
 
   // Check if the combination matches the secret combination
   if (JSON.stringify(lockValue) === JSON.stringify(SECRET_COMBO)) {
