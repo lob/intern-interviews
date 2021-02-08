@@ -26,12 +26,33 @@ function changeDialValue (index, incrementBy) {
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
 
+  // --- SOLUTION 1: Allows all input numbers --- 
   lockState.wheels[index] += incrementBy
 
   const correctAnswer = JSON.stringify(SECRET_COMBO)
   const currentAnswer = JSON.stringify(lockState.wheels)
 
   correctAnswer === currentAnswer && unlockAndRedirect()
+  // --- END SOLUTION 1 ---
+
+  // --- SOLUTION 2: Allows for input numbers 0 to 9 only ---
+
+  // const newValue = lockState.wheels[index] + incrementBy
+
+  // if (newValue < 0) {
+  //   lockState.wheels[index] = 9
+  // } else if (newValue > 9) {
+  //   lockState.wheels[index] = 0
+  // } else {
+  //   lockState.wheels[index] += incrementBy
+  // }
+
+  // const correctAnswer = JSON.stringify(SECRET_COMBO)
+  // const currentAnswer = JSON.stringify(lockState.wheels)
+
+  // correctAnswer === currentAnswer && unlockAndRedirect()
+
+  // --- END SOLUTION 2 ---
 }
 
 function unlockAndRedirect () {
