@@ -30,6 +30,11 @@ function changeDialValue (index, incrementBy) {
 
 }
 
+function unlockAndRedirect () {
+  lockState.locked = false
+  redirect('ellen-park')
+}
+
 // let our other modules find our functions
 window.lockState = lockState
 window.changeDialValue = changeDialValue
