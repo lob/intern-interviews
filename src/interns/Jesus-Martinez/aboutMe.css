@@ -1,0 +1,19 @@
+html,body {
+    background-color: antiquewhite !important;
+}
+
+li {
+    height: 40px;
+}
+
+img {
+    background-color: antiquewhite !important;
+    border-image: none;
+}
+#me{
+    text-align: center;
+    display: block;
+    border-color: black;
+    border: 5px;
+    border-style: solid;
+}

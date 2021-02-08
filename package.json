@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "eslint": "^7.19.0",
+    "npx": "^10.2.2",
     "standard": "^16.0.3"
   }
 }
