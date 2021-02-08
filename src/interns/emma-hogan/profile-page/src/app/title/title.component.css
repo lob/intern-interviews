@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+    width: 100%;
+    margin-right: 50%;
+    text-align: center;
+}
+h1 {
+    font-size: 75px;
+    font-weight: 900;
+    font-family: 'Pacifico', cursive;
+    text-transform: uppercase;
+    color: plum;
+    text-shadow: 3px 3px palevioletred;
+}

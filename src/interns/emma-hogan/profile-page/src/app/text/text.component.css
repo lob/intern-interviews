@@ -1,0 +1,17 @@
+.container {
+    position: relative;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Pacifico', monospace;
+    color: peru;
+}
+p {
+    font-size: 24px;
+    font-family: 'Pacifico';
+}
