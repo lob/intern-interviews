@@ -1,0 +1,42 @@
+img.rounded {
+    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.container:hover img{
+    opacity: 0.2;
+}
+
+.img-desc {
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    font-size: xx-large;
+    padding: 10px;
+    margin: 10px;
+    width: 85%;
+    height: auto;
+
+    /* The following 4 lines of code were modeled off of a solution found at: https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .img-desc{
+    opacity: 1;
+    color: black;
+}
+
+.container {
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
