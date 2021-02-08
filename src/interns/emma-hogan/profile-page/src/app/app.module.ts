@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfilePicComponent } from './profile-pic/profile-pic.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfilePicComponent
+    ProfilePicComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,
