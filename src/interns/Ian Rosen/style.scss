@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: whitesmoke;
+
+    img.left {
+        height: 100%;
+        width: 50%;
+    }
+    div.right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        div.inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            width: 75%;
+            padding-top: 4%;
+            margin: auto;
+    
+            border-radius: 25px;
+            background: linear-gradient(161deg,#004c9d 25%, #016bbd, #0297f3 75%, #93beed);
+            h1 {
+                width: 50%;
+                text-align: center;
+                border-bottom: 1px solid rgb(155, 155, 155);
+                color: white;
+            }
+    
+            p {
+                text-align: center;
+                padding: 5% 10%;
+                color: white;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    div.profile {
+        position: relative;
+        flex-direction: column;
+
+        
+        img.left {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        div.right {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            div.inner {   
+                width: 100%;
+                background: rgba(255, 255, 255, 0.6);
+                justify-content: unset;
+                h1 {
+                    color: black;
+                    font-size: 1.5rem;
+                }
+                
+                p {
+                    color: black;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.right {
+        width: 75%;
+        div.inner {
+            height: 300px;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    div.profile {
+
+        img.left {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+    }
+}

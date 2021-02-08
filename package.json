@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "node-sass": "^5.0.0",
     "standard": "^16.0.3"
   }
 }
