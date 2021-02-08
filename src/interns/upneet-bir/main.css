@@ -1,0 +1,17 @@
+  .card{
+     height: 600px;
+   }
+   .icon-image{
+    border-radius: 50%;
+    height: 10em;
+    width: 10em;
+   }
+   .list-group{
+     width:50%;
+   }
+   .col-custom{
+     width:10em;
+   }
+   .list-group{
+     margin-left: 30px;
+   }
