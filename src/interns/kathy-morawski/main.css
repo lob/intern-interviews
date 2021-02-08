@@ -1,22 +1,8 @@
-:root {
-  --color-white: #ffffff;
-  --color-cobalt: #1878E0;
-  --color-cerulean: #0099D7;
-  --color-grayfog: #EBEFF6;
-  --color-graydove: #C5D6E6;
-  --color-graymidnight: #324350;
-  --color-grayshadow50: #416581;
-  --color-graysteel: #5F83A5;
-  --color-grayblue: #EAF0F7;
-  --color-grayalt: #F8F9FA;
-  --color-success: #6BC4A6;
-  --color-error: #F76E40;
-}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
+
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Amatic SC', cursive;
   display: flex;
   flex-direction: row;
   min-width: 100vw;
@@ -42,27 +28,28 @@ body {
 }
 
 .col--left {
-  background-color: var(--color-graydove);
-  color: var(--color-white);
+  background-color: #9A8C98;
+  color: #C9ADA7;
 }
 
 h1 {
-  font-family: 'Neuton', serif;
+  font-family:'Amatic SC', cursive;
   font-size: 6vw;
   margin: 10px 0;
 }
 
 .col--right {
-  background-color: var(--color-grayblue);
+  background-color: #F2E9E4;
+  color: #22223B;
 }
 
-.lobster {
+.photo {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 20px;
 }
 
-.lobster img {
-  width: 25%;
+.photo img {
+  width: 60%;
   height: 100%;
 }
 

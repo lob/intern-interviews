@@ -21,7 +21,7 @@ function changeDialValue(index, incrementBy) {
   //Once every value in our new array from our .map method, set locked state to false and redirect to our intern page
   if (compareToSecretCombo.every((value) => (value === true))) {
     lockState.locked = false;
-    redirect('larry-lobster')
+    redirect('kathy-morawski')
   }
 }
 
