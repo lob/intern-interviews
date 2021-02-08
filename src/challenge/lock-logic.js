@@ -26,7 +26,7 @@ function changeDialValue (index, incrementBy) {
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
 
-  // --- SOLUTION 1: Allows all input numbers --- 
+  // --- SOLUTION 1: Allows all input numbers ---
   lockState.wheels[index] += incrementBy
 
   const correctAnswer = JSON.stringify(SECRET_COMBO)
