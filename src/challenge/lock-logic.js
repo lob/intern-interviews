@@ -28,6 +28,10 @@ function changeDialValue (index, incrementBy) {
 
   lockState.wheels[index] = lockState.wheels[index] + incrementBy 
 
+  const correctAnswer = JSON.stringify([1, 3, 1, 3]);
+  const currentAnswer = JSON.stringify(lockState.wheels);
+
+  correctAnswer === currentAnswer && unlockAndRedirect();
 }
 
 function unlockAndRedirect () {
