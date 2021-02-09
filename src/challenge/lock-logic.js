@@ -8,23 +8,22 @@ const lockState = window.mobx.observable({
 })
 
 function changeDialValue (index, incrementBy) {
-  // This part is missing some code
-  // This function is automatically called when the user clicks on a chevron
-  // it will be called with a wheel index and an amount to change the value by
-  // for example, if a user clicks on the "up" arrow for wheel 0
-  // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
-  // for example, if the user clicked the "down" arrow for the last wheel
-  // this will be called with arguments (3, -1).
+  if(lockState.locked == true)                                                  //First check if lock is locked
+  {
+    lockState.wheels[index]+=incrementBy;                                       //Increment lock wheel by incrementBy
+    
+    if(lockState.wheels[index] == -1)                                           //Account for decrement at 0 by setting equal to 9
+      lockState.wheels[index] = 9;
 
-  // to change the state of the lock, simply make a call like
-  // lockState.locked = false
-  // or lockState.wheels[1] = 2
-  // the lock will re-render itself when the value changes
+    else if(lockState.wheels[index] == 10)                                      //Account for increment at 9 by setting equal to 0
+      lockState.wheels[index] = 0;
 
-  // When the lock is set to match the secretCombo
-  // call the redirect() function with your name
-  // eg: redirect('larry-lobster')
-  // the redirect function will only redirect if the lockState is unlocked
+    if(JSON.stringify(lockState.wheels) == JSON.stringify(SECRET_COMBO))        //Comparing both arrays using stringify
+    {
+      lockState.locked = false;                                                 //Setting locked state to unlocked
+      redirect('Jose-Gonzalez');                                                //call redirect function with my name
+    }
+  }
 }
 
 // let our other modules find our functions
