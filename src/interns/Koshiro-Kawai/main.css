@@ -1,0 +1,34 @@
+html, body {margin:0;padding:0;height:100%;}
+
+
+.mainContainer{
+    display:flex;
+    flex-direction:row;
+    height:100%;
+
+}
+#leftColumn{
+    width:50%;
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#rightColumn{
+    width: 50%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.myPic{
+    width: 320px;
+    height: 480px;
+
+}
+img{
+    width: 100%;
+    height: 100%;
+}
