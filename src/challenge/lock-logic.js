@@ -7,7 +7,7 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
-function changeDialValue (index, incrementBy) {
+function changeDialValue(index, incrementBy) {
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by
@@ -20,6 +20,7 @@ function changeDialValue (index, incrementBy) {
   // lockState.locked = false
   // or lockState.wheels[1] = 2
   // the lock will re-render itself when the value changes
+  lockState.wheels[index] += incrementBy;
 
   // When the lock is set to match the secretCombo
   // call the redirect() function with your name
