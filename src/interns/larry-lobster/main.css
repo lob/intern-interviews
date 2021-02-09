@@ -32,7 +32,7 @@ body {
   padding: 20px 40px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   body {
     flex-direction: column;
   }
@@ -75,7 +75,7 @@ h1 {
   margin-top: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   body {
     flex-direction: column;
   }

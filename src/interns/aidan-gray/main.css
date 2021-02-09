@@ -1,0 +1,97 @@
+:root {
+  --color-white: #ffffff;
+  --color-cobalt: #1878E0;
+  --color-cerulean: #0099D7;
+  --color-grayfog: #EBEFF6;
+  --color-graydove: #C5D6E6;
+  --color-graymidnight: #324350;
+  --color-grayshadow50: #416581;
+  --color-graysteel: #5F83A5;
+  --color-grayblue: #EAF0F7;
+  --color-grayalt: #F8F9FA;
+  --color-success: #6BC4A6;
+  --color-error: #F76E40;
+  --color-maroon: #800000;
+  --color-copperrose: #996666;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+  }
+}
+
+.col--left {
+  background-color: var(--color-maroon);
+  color: var(--color-white);
+}
+
+h1 {
+  font-family: 'Neuton', serif;
+  font-size: 6vw;
+  margin: 10px 0;
+}
+
+.col--right {
+  background-color: var(--color-copperrose);
+}
+
+.bowman {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.bowman img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  padding: 0 20px;
+  text-align: justify;
+  color: var(--color-white);
+}
+
+.text p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .col--left {
+    height: 20vh;
+  }
+
+  .col--right {
+    height: calc(80vh - 80px);
+  }
+}
