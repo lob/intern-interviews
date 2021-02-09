@@ -13,7 +13,7 @@ titleBar {
 columns {
   background-color: #E1F2FE;
   font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: min(5vh, 2.5vw);
+  font-size: min(5vh, 4vw);
   color: #5A0001;
   display: flex;
   flex-flow: column;
