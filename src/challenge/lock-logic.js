@@ -22,6 +22,21 @@ function changeDialValue(index, incrementBy) {
   // the lock will re-render itself when the value changes
   lockState.wheels[index] += incrementBy;
 
+
+  var match = true;
+  var i = 0;
+  while (i < SECRET_COMBO.length && match) {
+    if (lockState.wheels[i] != SECRET_COMBO[i]) {
+      match = false;
+    }
+    i++;
+  }
+
+  if (match) {
+    lockState.locked = false;
+    redirect('emma-hogan');
+  }
+
   // When the lock is set to match the secretCombo
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
