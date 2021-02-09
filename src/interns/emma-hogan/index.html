@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Emma Hogan</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .title_container {
+      position: relative;
+      width: 100%;
+      margin-right: 50%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 75px;
+      font-weight: 900;
+      font-family: 'Pacifico', cursive;
+      text-transform: uppercase;
+      color: plum;
+      text-shadow: 3px 3px palevioletred;
+    }
+
+    img.rounded {
+      border-radius: 50%;
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+      backface-visibility: hidden;
+    }
+
+    .container:hover img {
+      opacity: 0.2;
+    }
+
+    .img-desc {
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      font-size: x-large;
+      font-weight: bold;
+      padding: 10px;
+      width: 85%;
+      height: auto;
+
+      /* The following 4 lines of code were modeled off of a solution found at: https://www.w3schools.com/howto/howto_css_image_overlay.asp*/
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+
+    .container:hover .img-desc {
+      opacity: 1;
+      color: black;
+    }
+
+    .container {
+      position: relative;
+      width: 90%;
+      font-family: 'Pacifico', monospace;
+    }
+
+    .content {
+      display: flex;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+    }
+
+    .pro-pic {
+      width: 50%;
+      display: inline-block;
+    }
+
+    .text {
+      width: 50%;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .text_container {
+      position: relative;
+      width: 100%;
+      margin-left: 5%;
+      margin-right: 5%;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 50px;
+      font-weight: 700;
+      font-family: 'Pacifico', monospace;
+      color: peru;
+    }
+
+    p {
+      font-size: 24px;
+      font-family: 'Pacifico';
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="title_container">
+    <h1>Emma Hogan</h1>
+  </div>
+  <div class="content">
+    <div class="pro-pic">
+      <div class="container">
+        <img src="angels-landing.jpg" class="rounded" alt="Profile Picture">
+        <div class="img-desc">
+          <p class="img-desc">This is a photo of me at the top of Angel's Landing at Zion National Park. <br><br>This is
+            the hardest hike I have ever attempted, and it reminds me of the persistance and determination it took to
+            reach the top.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <div class="text_container">
+        <h2>About Me</h2>
+        <hr>
+        <p><b>Why Lob: </b>What sets Lob apart from other internship opportunities for me is the focus on
+          bridging work in the Software Engineering field to the world outside of technology.<br><br>I chose the
+          Software
+          Engineering field because I found it to be the intersection of my academic strengths in both
+          creative and technical areas. However, I have never planned on using my Computer Science degree to earn the
+          highest salary possible at a large corporation. I chose Software Engineering because I am good at it, and in
+          order to maximize the impact I can have on the issues I care about I will apply my personal strengths to the
+          best of my ability.<br><br></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
