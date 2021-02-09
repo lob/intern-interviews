@@ -2,3 +2,34 @@ html {
     background: url("images/bg-img.jpg") no-repeat center fixed;
     background-size: cover;
 }
+
+.prof-box {
+    width: 70%;
+    height: 90%;
+    background-color: rgba(95, 95, 95, 0.5);
+    padding: 40px;
+    color: white;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.prof-pic {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-weight: 100;
+    letter-spacing: 6;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: lighter;
+}
