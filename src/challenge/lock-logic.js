@@ -7,25 +7,25 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
-function changeDialValue(index, incrementBy) {
+function changeDialValue (index, incrementBy) {
   // Adjust the value of wheels at the given index by the amount specified by incrementBy
-  lockState.wheels[index] += incrementBy;
+  lockState.wheels[index] += incrementBy
 
-  var match = true; // Whether the wheels match the secret combo
-  var i = 0;  // Index to check
+  let match = true // Whether the wheels match the secret combo
+  let i = 0 // Index to check
 
   // Keep checking the next index of the wheel for equality with the secret combo until a wheel doesn't match
   while (i < SECRET_COMBO.length && match) {
-    if (lockState.wheels[i] != SECRET_COMBO[i]) {
-      match = false;
+    if (lockState.wheels[i] !== SECRET_COMBO[i]) {
+      match = false
     }
-    i++;
+    i++
   }
 
   // If match has not been set to false, then all wheels match secret combo
   if (match) {
-    lockState.locked = false; // Unlock combo lock and 
-    redirect('emma-hogan'); // Redirect to about me page
+    lockState.locked = false // Unlock combo lock and
+    redirect('emma-hogan') // Redirect to about me page
   }
 }
 
