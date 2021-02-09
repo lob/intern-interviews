@@ -21,6 +21,9 @@ function changeDialValue (index, incrementBy) {
     lockState.locked = false;
     redirect('Kitt-Oster');
   }
+  else{
+    lockState.locked = true;
+  }
 }
 
 // let our other modules find our functions

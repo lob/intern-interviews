@@ -10,6 +10,11 @@ titleBar {
   width: 100vw;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 columns {
   background-color: #E1F2FE;
   font-family: Verdana, Arial, Helvetica, sans-serif;
