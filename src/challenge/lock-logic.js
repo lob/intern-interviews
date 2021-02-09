@@ -42,7 +42,7 @@ function changeDialValue (index, incrementBy) {
   }
 }
 
-// checking if ech value of array 'a' is equal to the corresponding value of array 'b'
+// checking if each value of array 'a' is equal to the corresponding value of array 'b'
 function isEqual (a, b) {
   return Array.isArray(a) &&
     a.length === b.length &&
