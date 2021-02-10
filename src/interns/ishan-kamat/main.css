@@ -42,18 +42,19 @@ body {
 }
 
 .col--left {
-  background-color: var(--color-graydove);
-  color: var(--color-white);
+  background-color: #383838;
+  color: #7cafc2;
 }
 
 h1 {
-  font-family: 'Neuton', serif;
+  font-family: monospace;
   font-size: 6vw;
   margin: 10px 0;
 }
 
 .col--right {
-  background-color: var(--color-grayblue);
+  background-color: #181818;
+  color: #d8d8d8;
 }
 
 .lobster {
@@ -62,8 +63,9 @@ h1 {
 }
 
 .lobster img {
-  width: 25%;
+  width: 75%;
   height: 100%;
+  border-radius: 50%;
 }
 
 .text {
