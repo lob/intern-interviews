@@ -208,7 +208,7 @@ body {
   border-top: 1px dotted var(--color-secondary);
 }
 
-@media (max-width: 864px) {
+@media (max-width: 1000px) {
   .header__container,
   .bio__container,
   .image__container,
