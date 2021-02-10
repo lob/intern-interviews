@@ -1,13 +1,32 @@
-const redirect = window.redirect
+const redirect = window.redirect;
 
-const SECRET_COMBO = [1, 3, 5, 1]
+const SECRET_COMBO = [1, 3, 5, 1];
 
 const lockState = window.mobx.observable({
   locked: true,
-  wheels: [0, 0, 0, 0]
-})
+  wheels: [0, 0, 0, 0],
+});
 
-function changeDialValue (index, incrementBy) {
+function changeDialValue(index, incrementBy) {
+  let digitVal = document.querySelectorAll(".digit")[index].value;
+  digitVal = parseInt(digitVal) + parseInt(incrementBy);
+  lockState.wheels[index] = digitVal;
+
+  function equalityCheck() {
+    for (let i = 0; i < SECRET_COMBO.length; i++) {
+      let element = SECRET_COMBO[i];
+      if (element !== lockState.wheels[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  if (equalityCheck()) {
+    lockState.locked = false;
+    redirect("larry-lobster");
+  }
+
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by
@@ -28,5 +47,5 @@ function changeDialValue (index, incrementBy) {
 }
 
 // let our other modules find our functions
-window.lockState = lockState
-window.changeDialValue = changeDialValue
+window.lockState = lockState;
+window.changeDialValue = changeDialValue;

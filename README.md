@@ -1,6 +1,6 @@
 # Intern Interviews
 ## Directions
-- Please duplicate this respository as a private repo in your own GitHub account.
+- √ Please duplicate this respository as a private repo in your own GitHub account.
 - Write your profile page (see details under [Profile Page](#profile-page))
 - Author your code (see details under [Code Challenge](#code-challenge))
 - Submit a pull request to your repo's `main` branch with your changes.
