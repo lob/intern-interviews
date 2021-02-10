@@ -1,0 +1,91 @@
+:root {
+  --color-white: #ffffff;
+  --color-cobalt: #1878e0;
+  --color-cerulean: #0099d7;
+  --color-grayfog: #ebeff6;
+  --color-graydove: #c5d6e6;
+  --color-graymidnight: #324350;
+  --color-grayshadow50: #416581;
+  --color-graysteel: #5f83a5;
+  --color-grayblue: #eaf0f7;
+  --color-grayalt: #f8f9fa;
+  --color-success: #6bc4a6;
+  --color-error: #f76e40;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap");
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.col {
+  width: 50%;
+  padding: 20px 0;
+}
+
+.col--left {
+  margin-top: 100px;
+  height: 40vh;
+}
+
+.col--right {
+  height: calc(80vh - 80px);
+}
+
+h1 {
+  font-family: "Raleway Dots", cursive;
+  font-size: 10vw;
+  margin: 100px 0;
+  color: #73ad21;
+}
+
+h1:hover {
+  text-shadow: 4px 4px 6px white;
+}
+
+.lobster {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.lobster img {
+  border-radius: 100px;
+  border: 4px solid #73ad21;
+  width: 250px;
+  height: 400px;
+  margin-top: 15px;
+}
+
+p {
+  padding: 5px 50px;
+  color: white;
+}
+
+.text {
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.text p:first-child {
+  margin-top: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -24,7 +24,7 @@ function changeDialValue(index, incrementBy) {
 
   if (equalityCheck()) {
     lockState.locked = false;
-    redirect("larry-lobster");
+    redirect("catherine");
   }
 
   // This part is missing some code
