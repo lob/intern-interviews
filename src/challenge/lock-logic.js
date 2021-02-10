@@ -25,6 +25,33 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+
+  // Lets make sure we cannot have negative numbers in our comb
+  if (lockState.wheels[index] === 0) {
+    if (incrementBy > 0) {
+      lockState.wheels[index] += incrementBy // increment or decrement at a wheel
+    }
+  } else {
+    lockState.wheels[index] += incrementBy // increment or decrement at a wheel
+  }
+
+  // Lets check for the secret comb
+  let lockcheck = true
+  let i
+  for (i = 0; i < lockState.wheels.length; i++) {
+    if (lockState.wheels[i] !== SECRET_COMBO[i]) {
+      lockcheck = false
+      break // if any of the comb is incorrect, we can just exit to save time
+    }
+  }
+
+  // lock or unlock
+  if (lockcheck) {
+    lockState.locked = false
+    redirect('moeez-khan')
+  } else {
+    lockState.locked = true
+  }
 }
 
 // let our other modules find our functions
