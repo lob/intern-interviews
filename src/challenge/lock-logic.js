@@ -46,6 +46,7 @@ function changeDialValue(index, incrementBy) {
   // the redirect function will only redirect if the lockState is unlocked
 }
 
+
 // let our other modules find our functions
 window.lockState = lockState;
 window.changeDialValue = changeDialValue;
