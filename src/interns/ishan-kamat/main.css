@@ -16,7 +16,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   display: flex;
   flex-direction: row;
   min-width: 100vw;
@@ -43,13 +43,17 @@ body {
 
 .col--left {
   background-color: #383838;
-  color: #7cafc2;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
   font-family: monospace;
   font-size: 6vw;
   margin: 10px 0;
+  color: #7cafc2;
 }
 
 .col--right {
@@ -94,3 +98,30 @@ h1 {
     height: calc(80vh - 80px);
   }
 }
+
+.text .red {
+  color: #ab4642;
+}
+.text .green {
+  color: #a1b56c;
+}
+.text .yellow {
+  color: #f7ca88;
+}
+.text .blue {
+  color: #7cafc2;
+}
+.text .magenta {
+  color: #ba8baf;
+}
+.text .cyan {
+  color: #86c1b9;
+}
+.text .orange {
+  color: #dc9656;
+}
+.text .white {
+  color: #d8d8d8;
+}
+
+
