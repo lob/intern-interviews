@@ -1,0 +1,65 @@
+:root {
+    font-family: "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    --divider-gap: 1rem;
+  }
+
+  body {
+    flex-direction: column;
+    text-align: justify;
+    padding: 30px;
+    text-align: justify;
+  }
+
+  hr.solid {
+    border-top: 3px solid #bbb;
+  }
+  
+  img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.text p:first-child {
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    margin-top: 20px;
+  }
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.5vh;
+    margin-top: 30px;
+   
+}
+
+.divider::before, .divider::after {
+    content: "";
+    height: 1px;
+    background-color: #bbb;
+    flex-grow: 1;
+}
+
+.divider::before {
+    margin-right: var(--divider-gap);
+}
+
+.divider::after {
+    margin-left: var(--divider-gap);
+}
+
+
