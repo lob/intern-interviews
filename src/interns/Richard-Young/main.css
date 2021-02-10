@@ -1,0 +1,119 @@
+:root {
+    --web-width: 1400px;
+    --res-width-1: 1000px;
+    --res-width-2: 800px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient(to right bottom,#7775a5,#3c3b66);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Helvetica', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: var(--web-width);
+    margin: auto;
+    height: 100%;
+    padding: 2rem;
+}
+
+.flex-container {
+    width: 100%;
+    min-height: 80rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #171934;
+    border-radius: 10px;
+    box-shadow: 0 2rem 6rem rgb(0 0 0 / 30%);
+}
+
+.image-container {
+    background: url('./UNT.jpg') no-repeat center/cover;
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+}
+.name-hero {
+    background-color: #0daf58;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 1rem;
+    color: white;
+    font-size: 2.5rem;
+}
+.profile-container {
+    width: 60%;
+    color: white;
+    font-size: 1.6rem;
+    padding: 3rem;
+}
+
+.profile-container p {
+    margin-bottom: 2.25rem;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+}
+
+.profile-container h5 {
+    font-size: 1.8rem;
+}
+.profile-container a {
+    color: white
+}
+.profile-container a:hover {
+    color: #0daf58;
+    transition: color .5s;
+}
+
+@media screen and (max-width: 1425px) {
+    .container {
+        width: var(--res-width-1);
+    }
+    .image-container {
+        background-position: 50.75%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .container {
+        width: var(--res-width-2);
+    }
+    .flex-container {
+        flex-direction: column;
+        height: 100%;
+    }
+    .image-container {
+        width: 100%;
+        height: 40rem;
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }  
+    .profile-container {
+        width: 100%;
+        font-size: 1.35rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .name-hero {
+        display: none;
+    }
+}
