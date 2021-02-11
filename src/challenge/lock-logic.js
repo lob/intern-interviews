@@ -1,3 +1,8 @@
+/*==============================
+  Author : Tanmay kejriwal
+  Date : 11 February 2021 
+  Purpose : Ads Functionality to combination lock and redirects
+  ============================== */
 const redirect = window.redirect
 
 const SECRET_COMBO = [1, 3, 5, 1]
@@ -6,6 +11,11 @@ const lockState = window.mobx.observable({
   locked: true,
   wheels: [0, 0, 0, 0]
 })
+//declaring global variables outside the function , so no variable is initialised everytime the function is called
+var val0=0;
+var val1=0;
+var val2=0;
+var val3=0;
 
 function changeDialValue (index, incrementBy) {
   // This part is missing some code
@@ -25,7 +35,37 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+  
+  //calling the function
+  incrValue(index,incrementBy);
+  
+
+  //checking if the input matches the SECRET COMBO
+  if(val0==SECRET_COMBO[0] && val1==SECRET_COMBO[1] && val2==SECRET_COMBO[2] && val3==SECRET_COMBO[3]){
+    lockState.locked = false ;
+    redirect('Tanmay-Kejriwal')
+  }
+
 }
+
+//creating a function
+function incrValue(index,incrementBy){
+  
+  //checking if up button is pressed
+  if(incrementBy>0){
+    //increasing the value of variable "vali" i being dynamic
+    window['val'+index]++;
+  }
+  else{
+    //decreasing the value of variable "vali" i being dynamic
+    window['val'+index]--;
+  }
+  //updating the value in user view at the input box
+  document.getElementsByTagName('input')[index].value=window['val'+index];
+}
+
+
+
 
 // let our other modules find our functions
 window.lockState = lockState
