@@ -9,7 +9,7 @@
 - Provide a link to your created PR when submitting your application
 
 ## Profile Page
-Make a folder for yourself with your name inside `/src/interns/`.
+Make a folder for yourself with your name inside `/src/interns/`
 
 Make the page your own, including a picture meaningful to you (it doesn't have to be of you, but it can be!) and a paragraph about what you want to learn during an internship.  Make sure to cover what makes you want to be a software engineer and what sorts of software you'd like to create.
 
