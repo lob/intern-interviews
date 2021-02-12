@@ -1,0 +1,40 @@
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(324deg, rgba(140,187,242,0.9727241238292192) 4%, rgba(255,255,255,1) 54%);
+}
+
+.Header{
+    text-align: center;
+    height: 20%;
+}
+
+.Header h1{
+    font-family: fantasy;
+}
+
+.picture{
+    text-align: center;
+    height: 40%;
+}
+.picture img{
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;  
+    height: 40%;
+    width: 30%;
+}
+
+.motivation{
+    text-align: center;
+}
+
+.motivation p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    vertical-align: middle;
+    text-align: left;
+    width: 40%;
+}
