@@ -13,14 +13,20 @@
   --color-error: #F76E40;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,300&display=swap');
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
+  font-family: 'Crimson Pro', serif;
+
+  /* display: flex;
   flex-direction: row;
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 100vh; */
+}
+
+.about-me p {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .col {
@@ -46,11 +52,11 @@ body {
   color: var(--color-white);
 }
 
-h1 {
+/* h1 {
   font-family: 'Neuton', serif;
   font-size: 6vw;
   margin: 10px 0;
-}
+} */
 
 .col--right {
   background-color: var(--color-grayblue);
