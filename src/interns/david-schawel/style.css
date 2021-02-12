@@ -1,4 +1,34 @@
+.bio {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    margin-top: 5%;
+}
+
+.bio h1, h2 {
+    margin-left: 6%;
+}
+
+.about {
+    margin-left: 35%;
+    margin-top: -25%;
+}
+
+.about-bio {
+    border: 3px solid black;
+    padding-left: 2%;
+    width: 60%;
+}
+
 img {
-    height: 250px;
-    width: 250px;
+    height: 350px;
+    width: 350px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+a {
+    color: blue;
+    margin-right: 2%;
+    text-decoration: none;
 }
