@@ -7,7 +7,31 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
-function changeDialValue (index, incrementBy) {
+function changeDialValue(index, incrementBy) {
+  // if the value of incrementBy is greater than 0, add 1 to the index
+  if (incrementBy > 0) {
+    lockState.wheels[index] = lockState.wheels[index] + 1
+  } else {
+    // subtract 1 from the index
+    lockState.wheels[index] = lockState.wheels[index] - 1
+  }
+
+  // initialize an empty array for the lock
+  let wheelCombo = []
+  // loop through each wheel and get it's value
+  lockState.wheels.forEach(wheel => {
+    // push the value to the wheelCombo array
+    wheelCombo.push(wheel)
+    // console.log(wheelCombo, SECRET_COMBO)
+    // check if wheelCombo array is equal to the SECRET_COMBO array
+    if (JSON.stringify(wheelCombo) == JSON.stringify(SECRET_COMBO)) {
+      // console.log("FOUND THE COMBO")
+      // If the two arrays match, unlock the lock
+      lockState.locked = false
+      // redirect
+      redirect('david-schawel')
+    }
+  })
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by
