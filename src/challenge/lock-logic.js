@@ -1,4 +1,4 @@
-const redirect = window.redirect
+// const redirect = window.redirect
 
 const SECRET_COMBO = [1, 3, 5, 1]
 
@@ -6,6 +6,10 @@ const lockState = window.mobx.observable({
   locked: true,
   wheels: [0, 0, 0, 0]
 })
+
+function matchArr (arr1, arr2) {
+  return JSON.stringify(arr1) === JSON.stringify(arr2)
+}
 
 function changeDialValue (index, incrementBy) {
   // This part is missing some code
@@ -20,6 +24,13 @@ function changeDialValue (index, incrementBy) {
   // lockState.locked = false
   // or lockState.wheels[1] = 2
   // the lock will re-render itself when the value changes
+  // alert(` lockState -> ${lockState.wheels[index]} | ${incrementBy} `)
+  lockState.wheels[index] += incrementBy
+
+  if (matchArr(lockState.wheels, SECRET_COMBO)) {
+    lockState.locked = false
+    window.redirect('irfan-shaikh')
+  }
 
   // When the lock is set to match the secretCombo
   // call the redirect() function with your name

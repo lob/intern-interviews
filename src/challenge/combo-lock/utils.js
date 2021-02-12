@@ -16,7 +16,7 @@
   window.redirect = function (internName) {
     setTimeout(() => {
       if (!window.lockState.locked) {
-        window.location = `../interns/${internName}/index.html`
+        window.location.href = `../interns/${internName}/index.html`
       }
     }, 1500)
   }
