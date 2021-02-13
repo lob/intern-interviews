@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: rgb(44, 9, 53);
+    font-weight: 600;
+    opacity: 0.8;
+    animation-duration: 2s;
+    animation-name: fadein;
+}
+
+h3,
+h5 {
+    color: #1a1a1a;
+    font-weight: 500;
+    opacity: 0.8;
+    animation-duration: 4s;
+    animation-name: appear;
+}
+
+p {
+    color: #1a1a1a;
+    font-size: larger !important;
+    font-weight: 300;
+    opacity: 0.8;
+    animation-duration: 4s;
+    animation-name: appear;
+}
+
+.user {
+    animation-duration: 3s;
+    animation-name: picfade;
+    margin: 2rem 0rem;
+}
+
+main {
+    font-family: 'Londrina Solid', cursive;
+    font-size: large;
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, #c5ccff, #3927ff6b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    min-height: 76vh;
+    opacity: 0.9;
+    border-radius: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+img.pics {
+    justify-content: space-evenly;
+    display: flex;
+    flex: 1;
+    flex-flow: row;
+    max-height: 250px;
+    align-self: center;
+    animation-duration: 3s;
+    animation-name: picfade;
+    margin-bottom: 2rem;
+}
+
+.displayText {
+    margin: 3rem 4rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    animation-duration: 3s;
+    animation-name: picfade;
+}
+
+@keyframes picfade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
