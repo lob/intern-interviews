@@ -1,0 +1,46 @@
+body{
+  height:100%;
+  width:100%;
+  background-image: url("Images/Background.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#imgContainer img{
+  width:30%;
+  height:45%;
+  position:absolute;
+  top: 5%;
+  left:49%;
+}
+
+#Github{
+  width:20%;
+  height:40%;
+  position:absolute;
+  left:10%;
+  top:20%;
+}
+
+#Linkedin{
+  width:20%;
+  height:40%;
+  position:absolute;
+  left:9%;
+  top:60%;
+}
+
+#Name{
+  position:absolute;
+  left:7%;
+  font-size: 200%;
+}
+#paragraph {
+  width:50%;
+  height:20%;
+  position:absolute;
+  top: 50%;
+  left:40%;
+  font-size: 130%;
+}
