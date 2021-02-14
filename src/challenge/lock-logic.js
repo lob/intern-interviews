@@ -25,6 +25,35 @@ function changeDialValue (index, incrementBy) {
   // call the redirect() function with your name
   // eg: redirect('larry-lobster')
   // the redirect function will only redirect if the lockState is unlocked
+
+  lockState.wheels[index] += incrementBy;
+
+  //prevents wheel value from being negative
+  if(lockState.wheels[index] < 0){
+    lockState.wheels[index] += 10;
+  }
+
+  //prevents wheel value from being double digits
+  if(lockState.wheels[index] >= 10){
+    lockState.wheels[index] -= 10;
+  }
+
+  //determines if combination is correct
+  numLocked = 4;
+
+  //loops through each digit
+  for(i = 0; i<4; i++){
+      if(lockState.wheels[i] == SECRET_COMBO[i]){
+        numLocked --;
+      }
+  }
+
+  //if none of the digits are incorrect, the lock will unlock and redirect
+  if(numLocked == 0){
+    lockState.locked = false;
+    redirect('dean-jones');
+  }
+
 }
 
 // let our other modules find our functions
