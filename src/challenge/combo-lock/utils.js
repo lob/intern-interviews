@@ -14,10 +14,12 @@
   }
 
   window.redirect = function (internName) {
+    console.log("testttt")
     setTimeout(() => {
       if (!window.lockState.locked) {
+        console.log("testttt")
         window.location = `../interns/${internName}/index.html`
       }
-    }, 1500)
+    }, 15)
   }
 })()

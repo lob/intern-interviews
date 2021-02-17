@@ -1,13 +1,24 @@
 const redirect = window.redirect
 
 const SECRET_COMBO = [1, 3, 5, 1]
-
+var combo =[0, 0, 0, 0]
 const lockState = window.mobx.observable({
   locked: true,
   wheels: [0, 0, 0, 0]
 })
 
 function changeDialValue (index, incrementBy) {
+  lockState.wheels[index]=lockState.wheels[index]+incrementBy
+  console.log(lockState.wheels)
+  if(lockState.wheels[0] == 1 && lockState.wheels[1] == 3 &&lockState.wheels[2] == 5 &&lockState.wheels[3] == 1 ){
+    lockState.locked=false;
+  }else{
+    lockState.locked=true;
+  }
+  if(lockState.locked!==true)
+  {
+    redirect('KishorePrabahar')
+  }
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by
