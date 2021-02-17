@@ -1,0 +1,267 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:800|Montserrat:400,700');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+
+.invisible {
+  display: none;
+}
+
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+   transform: scale(1.05);
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 22px;
+}
+
+li {
+  font-size: 20px;
+}
+
+a {
+  color: black;
+}
+
+/************************************************
+----------------- NAV BAR STYLE -----------------
+*************************************************/
+
+nav {
+  z-index: 4;
+  height: 70px;
+  width: 100%;
+  padding-left: 30%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  position: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+nav, footer {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav > a {
+  height: 100%;
+  padding: 0 10px 0 10px;
+  color: whitesmoke;
+  mix-blend-mode: difference;
+  display: inline-block;
+  line-height: 70px;
+  font-size: 25px;
+  text-decoration: none;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+.default-nav > a {
+  color: black;
+  mix-blend-mode: normal;
+}
+
+.default-nav {
+    background-color: white;
+}
+
+#nav-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+}
+
+#nav-background:before {
+  background: inherit;
+  background-color: white;
+  top: 0;
+  content: '';
+  display: block;
+  height: 210px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-2deg);
+  transform-origin: 0% 0%;
+  z-index: -3;
+}
+
+#nav-shadow {
+  box-shadow: 0 4px 5px -5px black;
+  height: 70px;
+  width: 150%;
+  position: fixed;
+  z-index: 3;
+}
+
+/*****************************************************
+----------------- MAIN CONTENT STYLE -----------------
+******************************************************/
+
+
+header {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("Seattle.jpg");
+  display: flex;
+  align-items: center;
+}
+
+
+section {
+  padding: 0 20%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+}
+
+section > nav > a {
+  color: black;
+}
+
+.header-texts {
+  position: relative;
+}
+
+.header-texts > h1:first-child {
+  position: absolute;
+}
+
+.header-texts > a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 0 5px black;
+}
+
+.header-info {
+  margin: 0;
+  position: fixed;
+  width: 60%;
+  left: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-info > img {
+  width: 350px;
+  height: auto;
+  margin: 1em;
+  border-radius: 5px;
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  transform: translateY(5em) rotateZ(-5deg)
+}
+
+.header-info > .header-texts {
+  width: 50%;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.parallax {
+  height: 700px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.content:before {
+  background: inherit;
+  top: 0;
+  content: '';
+  display: block;
+  height: 90%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform-origin: 0;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  padding-bottom: 50px;
+}
+
+#coding {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/coding.jpeg");
+  background-position: top;
+}
+
+/***************************************************
+----------------- IMAGE SLIDER STYLE -----------------
+****************************************************/
+
+#slide-container {
+  display: flex;
+  align-items: center;
+}
+
+#slide-container > i {
+  font-size: 2em;
+}
+
+#left-btn, #right-btn {
+  cursor: pointer;
+}
+
+.slides {
+  padding: 0 20px;
+  width: calc(100% - 40px - 5em);
+  height: auto;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/**************************************************
+----------------- MEDIA QUERY STYLE -----------------
+***************************************************/
+
+@media only screen and (max-width: 1200px) {
+  .header-info {
+    width: 90%;
+    left: 5%;
+  }
+
+  .content > * {
+    width: 100%;
+  }
+}
+
+
+
