@@ -1,0 +1,43 @@
+body::after {
+    background: url("mountain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+h1 {
+    font-family: Arial;
+    font-size: 300%;
+    text-align: center;
+}
+
+.column {
+    float: right;
+    width: 50%;
+}
+
+img {
+    width: 50%;
+    height: 20%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    font-family: Arial;
+    font-size: 130%;
+    text-align: center;
+    font-weight: bold;
+}
