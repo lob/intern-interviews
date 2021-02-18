@@ -1,30 +1,43 @@
 const redirect = window.redirect
 
 const SECRET_COMBO = [1, 3, 5, 1]
+const MAX_LOCK_INT = 9;
+const MIN_LOCK_INT = 0;
 
 const lockState = window.mobx.observable({
   locked: true,
   wheels: [0, 0, 0, 0]
 })
 
+function arraysAreEqual(array_a, array_b) {
+  
+  let equalityStatus = array_a.length === array_b.length;
+  let i = 0;
+
+  while(equalityStatus && i < array_a.length) {
+    if(array_a[i] != array_b[i])  {
+      equalityStatus = false;
+    }
+    i++;
+  }
+
+  return equalityStatus
+}
+
 function changeDialValue (index, incrementBy) {
-  // This part is missing some code
-  // This function is automatically called when the user clicks on a chevron
-  // it will be called with a wheel index and an amount to change the value by
-  // for example, if a user clicks on the "up" arrow for wheel 0
-  // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
-  // for example, if the user clicked the "down" arrow for the last wheel
-  // this will be called with arguments (3, -1).
+  
+  canUpdateLockValue = lockState.wheels[index] + incrementBy <= MAX_LOCK_INT && lockState.wheels[index] + incrementBy >= MIN_LOCK_INT; 
 
-  // to change the state of the lock, simply make a call like
-  // lockState.locked = false
-  // or lockState.wheels[1] = 2
-  // the lock will re-render itself when the value changes
+  // Assuming Lock values are in range 0-9
+  if (canUpdateLockValue) {
+    lockState.wheels[index] += incrementBy;
+  }
 
-  // When the lock is set to match the secretCombo
-  // call the redirect() function with your name
-  // eg: redirect('larry-lobster')
-  // the redirect function will only redirect if the lockState is unlocked
+  let lockCombinationIsCorrect = arraysAreEqual(lockState.wheels, SECRET_COMBO)
+  if (lockCombinationIsCorrect) {
+    lockState.locked = false
+    redirect('larry-lobster')
+  }
 }
 
 // let our other modules find our functions
