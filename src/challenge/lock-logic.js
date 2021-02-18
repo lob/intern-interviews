@@ -36,7 +36,7 @@ function changeDialValue (index, incrementBy) {
   let lockCombinationIsCorrect = arraysAreEqual(lockState.wheels, SECRET_COMBO)
   if (lockCombinationIsCorrect) {
     lockState.locked = false
-    redirect('larry-lobster')
+    redirect('alejandro-armas')
   }
 }
 
