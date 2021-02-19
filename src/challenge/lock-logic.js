@@ -25,11 +25,6 @@ const checkIfCodeMatched = () => {
     }
 }
 
-const redirect_new = () => {
-  console.log("Redirect function called");
-  location.href = "../manoj-ponagandla/index.html";
-}
-
 const checkifUnlocked = () => {
   if(lockState.locked == false){
     redirect("manoj-ponagandla");
