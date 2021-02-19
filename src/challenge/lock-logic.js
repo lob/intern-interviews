@@ -14,9 +14,8 @@ function changeDialValue (index, incrementBy) {
   // Checks if the code pattern is matched
   checkIfCodeMatched();
   // If unlocked, redirect the page
-  if(lockState.locked == false){
-    redirect("manoj-ponagandla");
-  }
+  checkifUnlocked();
+  
 }
 
 const checkIfCodeMatched = () => {
@@ -31,6 +30,11 @@ const redirect_new = () => {
   location.href = "../manoj-ponagandla/index.html";
 }
 
+const checkifUnlocked = () => {
+  if(lockState.locked == false){
+    redirect("manoj-ponagandla");
+  }
+}
 // let our other modules find our functions
 window.lockState = lockState
 window.changeDialValue = changeDialValue
