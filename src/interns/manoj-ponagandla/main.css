@@ -1,0 +1,135 @@
+:root {
+  --color-white: #ffffff;
+  --color-cobalt: #1878e0;
+  --color-cerulean: #0099d7;
+  --color-grayfog: #ebeff6;
+  --color-graydove: #2993f7;
+  --color-graymidnight: #324350;
+  --color-grayshadow50: #416581;
+  --color-graysteel: #5f83a5;
+  --color-grayblue: #eaf0f7;
+  --color-grayalt: #f8f9fa;
+  --color-success: #6bc4a6;
+  --color-error: #f76e40;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+  }
+}
+
+.col--left {
+  background-color: var(--color-graydove);
+  color: var(--color-white);
+}
+
+.role {
+  text-align: end;
+  margin-left: 300px;
+}
+
+.company {
+  text-align: end;
+  margin-left: 50vh;
+  margin-right: 11vh;
+}
+
+h2,
+h3 {
+  font-family: "Newton", serif;
+  font-size: 5.2vw;
+  margin: 10px 0;
+}
+p {
+  font-family: "Newton", serif;
+}
+
+a {
+  color: white;
+}
+.col--right {
+  background-color: var(--color-grayblue);
+}
+
+.lobster {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.lobster img {
+  width: 35%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 400px;
+}
+
+.text {
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.text p:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .col--left {
+    height: 20vh;
+  }
+
+  .col--right {
+    height: calc(80vh - 80px);
+  }
+}
+
+.zoom {
+  padding: 20px;
+  background-color: none;
+  transition: transform 0.2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  color: rgb(255, 255, 255);
+}
+
+.icon {
+  min-width: 60px;
+  padding: 5px;
+  margin-left: 8px;
+}
