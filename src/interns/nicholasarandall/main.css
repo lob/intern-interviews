@@ -1,0 +1,103 @@
+.jumbotron {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.jumbo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin-bottom: 0;
+}
+
+.centerit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.col {
+  margin: 0;
+}
+
+.card {
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.card-text {
+  padding: 1rem;
+}
+.textbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.inner-img {
+  position: absolute;
+  right: 40%;
+  top: 38%;
+  z-index: 2;
+}
+
+.inner-img-right {
+  position: absolute;
+  right: 22%;
+  top: 40%;
+  z-index: 2;
+}
+
+.myname {
+  margin-top: 3rem;
+}
+
+.mybeautifulmug {
+  width: 50%;
+  position: relative;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.smaller-text {
+  font-size: small;
+}
+@media only screen and (max-width: 576px) {
+  p {
+    font-size: medium;
+  }
+
+  .mybeautifulmug {
+    width: 100%;
+  }
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  opacity: 0%;
+}
+
+.hidden-text {
+  opacity: 0;
+}

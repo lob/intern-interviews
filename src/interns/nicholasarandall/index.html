@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-dark@1.0.3/src/bootstrap-dark.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Nicholas A. Randall LobApp</title>
+  </head>
+  <body>
+    <div class="container-fluid centerit">
+      <div class="row">
+        <div class="col">
+          <h1 class="myname">Nicholas A. Randall</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 jumbo-container">
+          <div class="jumbotron">
+            <h1 class="centerit">Hello, Lob!</h1>
+            <p class="lead">
+              This page has two easter eggs. Can you find them both?
+            </p>
+            <br />
+            <p class="lead">
+              (Don't look at the code until you've had enough!)
+            </p>
+            <hr class="my-4" />
+            <p>Here's the first one.</p>
+            <a
+              class="btn btn-primary btn-lg"
+              href="#button1"
+              role="button"
+              id="button1"
+              onclick="incrementValueBtn1()"
+              >PRE33 <sup>*</sup> ME!</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card mybeautifulmug" id="pictureframe">
+        <img
+          src="nicholasinnature.png"
+          class="img-fluid"
+          alt="nicholasinnature"
+        />
+        <div class="caption" id="eyespuzzlecaption">
+          <h3>All eyes on me</h3>
+        </div>
+        <a href="#pictureframe" onclick="clickHandlerEyes()"
+          ><div class="inner-img">_</div></a
+        >
+        <a href="#pictureframe" onclick="clickHandlerEyes()"
+          ><div class="inner-img-right">_</div></a
+        >
+      </div>
+      <div class="row">
+        <div class="container centerit textbox">
+          <div class="card">
+            <p class="card-text">
+              As an intern, I want to deepen my understanding of full-stack web
+              development with an emphasis on front-end. I am also open to
+              learning more app development through Android with Java/Kotlin,
+              iOS with Swift, or multi-platform C# apps. Additionally, as you
+              can probably tell by this page, I have a strong interest in games
+              and puzzles. I want to make software that's enjoyable to use, not
+              purely functional. I would also like to practice harm-reduction
+              through building websites with minimal invasive tracking and data
+              gathering, as I am becoming a more conscious digital citizen who
+              wants the best for our customers, clients and for ourselves.
+            </p>
+            <p class="smaller-text">
+              *: Easter eggs are optional, but recommended.
+            </p>
+          </div>
+          <div class="card">
+            <p class="card-text hidden-text" id="congratsonfirst">
+              Nice job on finding the first secret. Can you make it to the
+              second? Do you care?
+            </p>
+          </div>
+          <div class="card">
+            <p class="card-text hidden-text" id="congratsonsecond">
+              Congratulations, you've found both secrets, or at least the second
+              one. As a reward, I will share my personal music portfolio with
+              you.
+              <a href="http://soundcloud.com/apogii">-></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
