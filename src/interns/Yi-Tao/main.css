@@ -16,11 +16,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neuton&display=swap');
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Georgia, serif;
   display: flex;
   flex-direction: row;
   min-width: 100vw;
   min-height: 100vh;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .col {
