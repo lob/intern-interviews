@@ -1,0 +1,130 @@
+:root {
+  --color-white: #ffffff;
+  --color-cobalt: #1878E0;
+  --color-cerulean: #0099D7;
+  --color-grayfog: #EBEFF6;
+  --color-graydove: #C5D6E6;
+  --color-graymidnight: #324350;
+  --color-grayshadow50: #416581;
+  --color-graysteel: #5F83A5;
+  --color-grayblue: #EAF0F7;
+  --color-grayalt: #F8F9FA;
+  --color-success: #6BC4A6;
+  --color-error: #F76E40;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  background-color: var(--color-graydove);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.indicator {
+  border: 2px solid var(--color-grayfog);
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  position: relative;
+}
+
+.indicator svg {
+  padding: 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: transform 0.25s ease;
+  width: 32px;
+  fill: var(--color-white);
+}
+
+.indicator .locked-svg{
+  transform: translate(-50%, -50%);
+}
+
+.indicator .unlocked-svg{
+  transform: translate(-50%, 50%);
+}
+
+.indicator.indicator--unlocked .unlocked-svg{
+  transform: translate(-50%, -50%);
+}
+
+.indicator .locked-svg {
+  background: var(--color-error);
+}
+
+.indicator .unlocked-svg {
+  background: var(--color-success);
+}
+
+.combination {
+  border: 2px solid var(--color-grayfog);
+  border-radius: 4px;
+  display: flex;
+  padding: 0 4px;
+}
+
+.combination .combination__wheel {
+  /* font-size: 24px; */
+  padding: 0 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.increment, .decrement {
+  background-color: var(--color-cerulean);
+  border: 2px solid var(--color-grayfog);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+.increment:active, .decrement:active {
+  border-color: var(--color-graymidnight);
+}
+
+.increment {
+  margin-top: -14px;
+}
+
+.decrement {
+  margin-bottom: -14px;
+}
+
+.digit {
+  -moz-appearance: textfield;
+  background-color: var(--color-cerulean);
+  border: 2px solid var(--color-grayfog);
+  border-radius: 24px;
+  color: var(--color-white);
+  cursor: pointer;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px 0;
+  text-align: center;
+  user-select: none;
+  transition: border-color 0.1s ease;
+  width: 48px;
+  caret-color: var(--color-cerulean);
+}
+
+.digit:focus {
+  border-color: var(--color-graymidnight);
+}
+
+.digit::-webkit-inner-spin-button,
+.digit::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
