@@ -1,0 +1,126 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(21px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(21px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(to right bottom, rgba(0, 17, 252, 0.8), rgba(247, 0, 66, 0.8), rgba(0, 0, 0, 0.8));
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 200px;
+}
+
+.header-text-box {
+  position: absolute;
+  top: 40%;
+  left: 27%;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  backface-visibility: hidden;
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  animation: moveInLeft 1s ease-out;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  animation: moveInRight 1s ease-out;
+  margin-left: 14rem;
+}
+
+.u-center-text {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.heading-secondary {
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #e60000, #ff3333);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+
+.heading-secondary:hover {
+  transform: skewY(1deg) skewX(10deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem black;
+}
+
+p {
+  font-size: 2rem;
+}
