@@ -7,7 +7,19 @@ const lockState = window.mobx.observable({
   wheels: [0, 0, 0, 0]
 })
 
+function checkUnlock (combo, wheels) {
+  if (combo.every((val, index) => val === wheels[index])) {
+    lockState.locked = false
+  }
+}
+
 function changeDialValue (index, incrementBy) {
+  lockState.wheels[index] += incrementBy
+
+  checkUnlock(SECRET_COMBO, lockState.wheels)
+
+  redirect('aaron-ballmer')
+
   // This part is missing some code
   // This function is automatically called when the user clicks on a chevron
   // it will be called with a wheel index and an amount to change the value by

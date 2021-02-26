@@ -1,0 +1,20 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #77cebc;
+    color: white;
+}
+
+.content {
+    display:inline-flex;
+    background:rgb(184, 184, 184);
+}
+
+img {
+    max-width: 75%;
+    height: auto;
+}
+
+.text {
+    color: rgb(0, 0, 0);
+}
