@@ -47,7 +47,7 @@ body {
 }
 
 h1 {
-  font-family: 'Neuton', serif;
+  font-family: 'Calibri', 'Sans-serif';
   font-size: 6vw;
   margin: 10px 0;
 }
@@ -56,19 +56,36 @@ h1 {
   background-color: var(--color-grayblue);
 }
 
-.lobster {
+.name {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.lobster img {
-  width: 25%;
+.mail {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.me {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.mail img {
+  width: 50%;
   height: 100%;
+  border-radius: 50%;
+}
+
+.me img {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .text {
   padding: 0 20px;
-  text-align: justify;
+  text-align: start;
 }
 
 .text p:first-child {
