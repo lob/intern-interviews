@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.cLeft, .cRight, .cMiddle {
+  float: left;
+  /* padding: 10px; */
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+.cLeft, .cRight {
+  width: 15%;
+  background-color: #D79922;
+}
+
+.cMiddle {
+  width: 70%;
+  background-color: #EFE2BA;
+  text-align: center;
+}
+img {
+  border-radius: 50%;
+}
+h1 {
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 40px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+p{
+  font-size: 20px;
+  padding: 10px;
+  font-family: 'RocknRoll One', sans-serif;
+}
+dt,dd{
+  font-family: 'RocknRoll One', sans-serif;
+  padding: 10px;
+}
