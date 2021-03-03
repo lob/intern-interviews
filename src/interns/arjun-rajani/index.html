@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+WRITTEN BY: Arjun Rajani
+EMAIL: arajani1@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Arjun Rajani">
+  <meta name="description" content="Portfolio">
+  <script src="https://kit.fontawesome.com/4ec9c8f6f3.js" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="Main.css" rel="stylesheet" type="text/css">
+  <!-- you would link to an external stylesheet here! -->
+   <!-- you would also link to Bootstrap here! -->
+  <title>Arjun Rajani</title>
+</head>
+<body onload="ballAnimate()">
+<!--  <p>-->
+<!--    <a href="http://validator.w3.org/check?uri=referer">-->
+<!--       W3C validator-->
+<!--    </a>-->
+<!--  </p>-->
+
+<!--topbar with links and brand-->
+<div class="navbar1">
+  <a class="navbar-brand" id="brand" href="#">Arjun Rajani </a>
+    <ul class="nav nav-pills justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link"  id="paddedTopLink1" href="#brand">Intro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="paddedTopLink2" href="#experienceHeader">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="paddedTopLink3" href="#skillsHeader">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="paddedTopLink4" href="#footerContainer">Contact</a>
+      </li>
+    </ul>
+</div>
+<!--circles that cross screen in first section-->
+<div id="animationBall"></div>
+<div id="animationBall2"></div>
+<div class="container1">
+  <div id="aboutBox">
+  <div class="container">
+    <div class="row">
+      <div class="col" id="photoCol">
+        <img alt="Professional Photo of Arjun Rajani" src="profilePhoto.jpg" id="profileImage">
+      </div>
+      <div class="col" id="mainInfo">
+        <h1 style="color:#212529;padding-bottom:8px;border-bottom:4px solid #7DB1FF;padding-right:15px;">About Me</h1>
+        <br />
+        <h2> Software Engineer </h2>
+        <br />
+        <h3> <a style="color:#2C3034" href="https://github.com/arajani1">Github</a> &nbsp; <em class="fab fa-github"></em></h3>
+        <br />
+        <h3 > <a style="color:#2C3034" href="resume.pdf">Resume</a> &nbsp; <em class="fas fa-address-card"></em></h3>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+<!--Paragraph section of website-->
+<div class="container2">
+  <h1 id="experienceHeader">As a Software Engineer</h1>
+  <br />
+  <div class="container">
+    <div class="row" id="experienceRow">
+      <h3 style="line-height: 54px;"> As a an intern, I want to receive as much exposure to modern industry practices in software engineering as possible. I would want to work in a team environment and cooperate with other developers and potentially other developer teams (QA, Security, DevOps, etc.). I want to be a software engineer because I love the feeling of solving problems and putting my knowledge into practice quickly. From my current experience, I thoroughly enjoy API development in Java, as backend components are exciting to integrate.</h3>
+    </div>
+</div>
+</div>
+<!--Skills section of website-->
+<div class="container3">
+  <h1 id="skillsHeader">My Skills</h1>
+  <div class="row">
+  <ul id="skills">
+    <li>Java</li>
+    <li>Python</li>
+    <li>C++</li>
+    <li>C</li>
+    <li>JavaScript</li>
+  </ul>
+  </div>
+  <div class="row"></div>
+  <ul id="skills2">
+    <li>PHP</li>
+    <li>JavaScript</li>
+    <li>HTML/CSS</li>
+    <li>RestAPI</li>
+    <li>SQL/NoSQL</li>
+    <li>AWS</li>
+  </ul>
+  <br />
+  <br />
+  <br />
+</div>
+
+
+
+<footer id="footerContainer">
+<p id="footerText">arajani1@uci.edu - (408) 767-8502</p>
+</footer>
+
+<!--This script takes the elements of animationBalls and moves them across the screen by attribute until they are off the screen-->
+<script>
+  function ballAnimate() {
+    var elem = document.getElementById("animationBall");
+    var elem2 = document.getElementById("animationBall2");
+    var pos = 0;
+    var mov = 3;
+    var id = setInterval(frame, 1);
+    function frame() {
+      if (pos >= window.innerWidth) {
+        pos = window.innerWidth-10;
+        mov *= -1;
+      }
+      else {
+        pos += mov;
+        elem.style.left = pos + "px";
+        elem2.style.left = pos + "px";
+      }
+    }
+
+  }
+</script>
+</body>
+
+</html>
+
