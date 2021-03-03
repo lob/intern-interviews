@@ -56,19 +56,19 @@ h1 {
   background-color: var(--color-grayblue);
 }
 
-.lobster {
+.human {
   text-align: center;
   margin-bottom: 48px;
 }
 
-.lobster img {
-  width: 25%;
+.huamn img {
+  width: 100%;
   height: 100%;
 }
 
 .text {
   padding: 0 20px;
-  text-align: justify;
+  text-align: flex;
 }
 
 .text p:first-child {
